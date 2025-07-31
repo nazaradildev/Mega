@@ -165,7 +165,7 @@ export default function Home() {
             <div className="grid gap-10 md:grid-cols-2 lg:gap-16 items-center">
               <div className="relative h-64 md:h-full">
                 <Image
-                  src="https://placehold.co/600x400.png"
+                  src="/about1.png"
                   alt="Surveying equipment"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
