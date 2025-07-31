@@ -21,17 +21,17 @@ export default function NaturalResourcesEnvironmentPage() {
                   Sustainable Management of Natural Resources & the Environment
                 </h1>
                 <p className="text-muted-foreground md:text-xl/relaxed">
-                  We offer advanced solutions for monitoring and managing our natural resources and protecting the environment. Our services contribute to environmental impact assessments and monitoring changes in vegetation and water resources.
+                  Advanced solutions for monitoring and managing natural resources and protecting the environment.
                 </p>
               </div>
               <div className="relative h-96">
                 <Image
-                  src="https://placehold.co/600x400.png"
+                  src="/market4.png"
                   alt="Natural Resources"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-xl object-cover"
-                  data-ai-hint="forest river"
+                  data-ai-hint="environmental conservation"
                 />
               </div>
             </div>

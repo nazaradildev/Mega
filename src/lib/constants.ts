@@ -58,8 +58,8 @@ export const MARKETS_SERVED = [
       title: "Natural Resources & Environment", 
       href: "/markets/natural-resources-environment",
       description: "Advanced solutions for monitoring and managing natural resources and protecting the environment.",
-      image: "https://placehold.co/600x450.png",
-      imageHint: "forest river"
+      image: "/market4.png",
+      imageHint: "environmental conservation"
     },
 ];
 
