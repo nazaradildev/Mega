@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription, SheetClose } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, ChevronLeft } from "lucide-react";
 import { Logo } from "../icons/logo";
 import {
   DropdownMenu,
@@ -19,6 +19,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useState, useEffect } from "react";
+import { cn } from "@/lib/utils";
 
 export function Header() {
   const [isClient, setIsClient] = useState(false)
@@ -63,7 +64,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className={"container flex h-14 max-w-screen-2xl items-center px-4 md:px-6"}>
+      <div className={cn("container flex h-14 max-w-screen-2xl items-center", isClient && "px-4 md:px-6")}>
         <Link href="/" className="mr-6 flex items-center space-x-2" prefetch={false}>
           <Logo className="h-6 w-6 text-primary" />
           <span className="font-bold hidden sm:inline-block">MEGA GEOSPATIAL</span>
@@ -112,19 +113,20 @@ export function Header() {
               <SheetContent side="left" className="pr-0">
                  <SheetTitle className="sr-only">Main Menu</SheetTitle>
                  <SheetDescription className="sr-only">Primary site navigation.</SheetDescription>
-                 <nav className="grid gap-4 text-lg font-medium">
-                   <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4" prefetch={false} onClick={handleLinkClick}>
-                     <Logo className="h-6 w-6 text-primary" />
-                     <span>MEGA GEOSPATIAL</span>
-                   </Link>
+                 <div className="flex items-center gap-2 text-lg font-semibold mb-4 p-4">
+                   <Logo className="h-6 w-6 text-primary" />
+                   <span>MEGA GEOSPATIAL</span>
+                 </div>
+                 <nav className="grid gap-2 text-lg font-medium px-4">
                    <Accordion type="multiple" className="w-full">
                      {navLinks.map((link) =>
                        link.subLinks ? (
                          <AccordionItem value={link.label} key={link.label} className="border-b-0">
-                           <AccordionTrigger className="text-muted-foreground hover:text-foreground hover:no-underline py-2 text-base">
-                             <Link href={link.href} onClick={handleLinkClick}>{link.label}</Link>
+                           <AccordionTrigger className="text-muted-foreground hover:text-foreground hover:no-underline py-3 text-base flex justify-between items-center w-full">
+                            <Link href={link.href} onClick={handleLinkClick}>{link.label}</Link>
+                            <ChevronLeft className="h-5 w-5 text-primary transition-transform duration-200 group-[&[data-state=open]]:-rotate-90" />
                            </AccordionTrigger>
-                           <AccordionContent className="pl-4">
+                           <AccordionContent className="pl-6 pb-2">
                              {link.subLinks.map((subLink) => (
                                <Link
                                  key={subLink.label}
@@ -142,7 +144,7 @@ export function Header() {
                          <Link
                            key={link.label}
                            href={link.href}
-                           className="block text-muted-foreground hover:text-foreground py-2 text-base"
+                           className="block text-muted-foreground hover:text-foreground py-3 text-base"
                            prefetch={false}
                            onClick={handleLinkClick}
                          >
