@@ -2,8 +2,8 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Building2, Droplet, Eye, GitBranch, Globe, Image as ImageIcon, Map, Mountain, Satellite, Scale, Ship, Compass, ShieldCheck, Users, BrainCircuit } from "lucide-react";
-import { HOME_SERVICES, SECTORS_SERVED, WHY_CHOOSE_US, BLOG_POSTS } from "@/lib/constants";
+import { ArrowRight, Building2, Droplet, GitBranch, Globe, Image as ImageIcon, Map, Mountain, Satellite, Scale, Ship, Compass, ShieldCheck, Users, BrainCircuit, Leaf, Eye } from "lucide-react";
+import { HOME_SERVICES, MARKETS_SERVED, WHY_CHOOSE_US, BLOG_POSTS } from "@/lib/constants";
 import Link from "next/link";
 
 const serviceIcons: { [key: string]: React.ElementType } = {
@@ -15,10 +15,10 @@ const serviceIcons: { [key: string]: React.ElementType } = {
   "Geodetic Surveying": Globe,
 };
 
-const sectorIcons: { [key: string]: React.ElementType } = {
+const marketIcons: { [key: string]: React.ElementType } = {
   "Real Estate & Urban Development": Building2,
   "Infrastructure & Energy": GitBranch,
-  "Agriculture & Food Security": ImageIcon,
+  "Agriculture & Food Security": Leaf,
   "Natural Resources & Environment": Droplet,
 };
 
@@ -47,12 +47,12 @@ export default function Home() {
           />
           <div className="container px-4 md:px-6 z-20 relative">
             <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_700px]">
-              <div className="flex flex-col justify-center space-y-4 text-white">
+              <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-4">
-                  <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                  <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-foreground">
                     Shaping the Future with Ultimate Precision
                   </h1>
-                  <p className="max-w-[600px] text-gray-300 md:text-xl">
+                  <p className="max-w-[600px] text-muted-foreground md:text-xl">
                     Innovative geospatial solutions and advanced surveying technologies that empower your projects to achieve the highest standards of accuracy and efficiency in the UAE.
                   </p>
                 </div>
@@ -134,23 +134,23 @@ export default function Home() {
           </div>
         </section>
         
-        <section id="sectors" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+        <section id="markets" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                <Badge>Sectors We Serve</Badge>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Customized Solutions for Diverse Sectors</h2>
+                <Badge>Markets We Serve</Badge>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Customized Solutions for Diverse Markets</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   We understand that every industry has unique challenges, which is why we offer solutions specifically tailored to meet your requirements.
                 </p>
             </div>
             <div className="mx-auto grid max-w-5xl items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-none lg:grid-cols-4 pt-12">
-              {SECTORS_SERVED.map((sector) => {
-                const Icon = sectorIcons[sector.title] || Building2;
+              {MARKETS_SERVED.map((market) => {
+                const Icon = marketIcons[market.title] || Building2;
                 return (
-                  <Link key={sector.title} href={sector.href}>
+                  <Link key={market.title} href={market.href}>
                   <div className="flex flex-col items-center text-center p-4 rounded-lg hover:bg-background/50 transition-colors">
                     <Icon className="w-12 h-12 text-primary mb-4" />
-                    <h3 className="text-lg font-bold">{sector.title}</h3>
+                    <h3 className="text-lg font-bold">{market.title}</h3>
                   </div>
                   </Link>
                 );

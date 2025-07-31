@@ -28,13 +28,13 @@ export function Header() {
       ] 
     },
     { 
-      href: "/sectors", 
-      label: "Sectors",
+      href: "/markets", 
+      label: "Markets",
       subLinks: [
-        { href: "/sectors/real-estate-development", label: "Real Estate & Urban Development" },
-        { href: "/sectors/infrastructure-energy", label: "Infrastructure & Energy" },
-        { href: "/sectors/agriculture-food-security", label: "Agriculture & Food Security" },
-        { href: "/sectors/natural-resources-environment", label: "Natural Resources & Environment" },
+        { href: "/markets/real-estate-development", label: "Real Estate & Urban Development" },
+        { href: "/markets/infrastructure-energy", label: "Infrastructure & Energy" },
+        { href: "/markets/agriculture-food-security", label: "Agriculture & Food Security" },
+        { href: "/markets/natural-resources-environment", label: "Natural Resources & Environment" },
       ]
     },
     { href: "/blog", label: "Blog" },

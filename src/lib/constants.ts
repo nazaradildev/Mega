@@ -31,11 +31,11 @@ export const HOME_SERVICES = [
   },
 ];
 
-export const SECTORS_SERVED = [
-    { title: "Real Estate & Urban Development", href: "/sectors/real-estate-development" },
-    { title: "Infrastructure & Energy", href: "/sectors/infrastructure-energy" },
-    { title: "Agriculture & Food Security", href: "/sectors/agriculture-food-security" },
-    { title: "Natural Resources & Environment", href: "/sectors/natural-resources-environment" },
+export const MARKETS_SERVED = [
+    { title: "Real Estate & Urban Development", href: "/markets/real-estate-development" },
+    { title: "Infrastructure & Energy", href: "/markets/infrastructure-energy" },
+    { title: "Agriculture & Food Security", href: "/markets/agriculture-food-security" },
+    { title: "Natural Resources & Environment", href: "/markets/natural-resources-environment" },
 ];
 
 export const WHY_CHOOSE_US = [
