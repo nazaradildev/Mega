@@ -36,22 +36,30 @@ export const MARKETS_SERVED = [
     { 
       title: "Real Estate & Urban Development", 
       href: "/markets/real-estate-development",
-      description: "Precise data for developers, planners, and consultants, from feasibility studies to marketing."
+      description: "Precise data for developers, planners, and consultants, from feasibility studies to marketing.",
+      image: "https://placehold.co/600x450.png",
+      imageHint: "cityscape development"
     },
     { 
       title: "Infrastructure & Energy", 
       href: "/markets/infrastructure-energy",
-      description: "Ensuring safety and efficiency for roads, bridges, and energy grids with absolute accuracy."
+      description: "Ensuring safety and efficiency for roads, bridges, and energy grids with absolute accuracy.",
+      image: "https://placehold.co/600x450.png",
+      imageHint: "bridge infrastructure"
     },
     { 
       title: "Agriculture & Food Security", 
       href: "/markets/agriculture-food-security",
-      description: "Optimizing production and resource use with remote sensing and GIS technologies."
+      description: "Optimizing production and resource use with remote sensing and GIS technologies.",
+      image: "https://placehold.co/600x450.png",
+      imageHint: "farm drone"
     },
     { 
       title: "Natural Resources & Environment", 
       href: "/markets/natural-resources-environment",
-      description: "Advanced solutions for monitoring and managing natural resources and protecting the environment."
+      description: "Advanced solutions for monitoring and managing natural resources and protecting the environment.",
+      image: "https://placehold.co/600x450.png",
+      imageHint: "forest river"
     },
 ];
 

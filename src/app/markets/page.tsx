@@ -1,15 +1,8 @@
 import Link from 'next/link';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Building2, GitBranch, Droplet, Users, Leaf } from 'lucide-react'; 
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 import { MARKETS_SERVED } from '@/lib/constants';
-
-const marketIcons: { [key: string]: React.ElementType } = {
-  "Real Estate & Urban Development": Building2,
-  "Infrastructure & Energy": GitBranch,
-  "Agriculture & Food Security": Leaf,
-  "Natural Resources & Environment": Droplet,
-};
-
 
 export default function MarketsPage() {
   return (
@@ -28,20 +21,30 @@ export default function MarketsPage() {
 
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              {MARKETS_SERVED.map((market) => {
-                const Icon = marketIcons[market.title] || Building2;
-                return (
-                  <Link href={market.href} key={market.title}>
-                    <div className="flex flex-col items-center text-center p-6 rounded-lg hover:bg-accent/10 transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-accent">
-                      <div className="flex justify-center mb-4">
-                        <Icon className="w-16 h-16 text-primary" />
-                      </div>
-                      <h3 className="text-xl font-bold">{market.title}</h3>
-                    </div>
-                  </Link>
-                );
-              })}
+            <div className="grid gap-16">
+              {MARKETS_SERVED.map((market, index) => (
+                <div key={market.title} className="grid md:grid-cols-2 gap-10 items-center">
+                  <div className={`space-y-4 ${index % 2 === 1 ? 'md:order-last' : ''}`}>
+                    <h2 className="text-3xl font-bold tracking-tighter">{market.title}</h2>
+                    <p className="text-muted-foreground md:text-lg">{market.description}</p>
+                    <Button asChild>
+                      <Link href={market.href}>
+                        Explore More <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
+                  <div className="relative h-80">
+                    <Image
+                      src={market.image || "https://placehold.co/600x450.png"}
+                      alt={market.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="rounded-xl object-cover"
+                      data-ai-hint={market.imageHint}
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
