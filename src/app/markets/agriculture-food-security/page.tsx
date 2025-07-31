@@ -13,7 +13,7 @@ export default function AgricultureFoodSecurityPage() {
   return (
     <div className="bg-background text-foreground">
       <main className="container px-4 md:px-6">
-        <section className="w-full py-20 md:py-32 lg:py-40 bg-secondary -mx-4 px-4 md:-mx-6 md:px-6">
+        <section className="w-full py-20 md:py-32 lg:py-40 bg-secondary rounded-lg">
           <div className="container px-4 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
               <div className="space-y-4">

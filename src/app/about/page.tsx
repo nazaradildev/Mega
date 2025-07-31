@@ -7,7 +7,7 @@ export default function AboutPage() {
   return (
     <div className="bg-background text-foreground">
       <main className="container px-4 md:px-6">
-        <section className="w-full py-20 md:py-32 lg:py-40 bg-secondary -mx-4 px-4 md:-mx-6 md:px-6">
+        <section className="w-full py-20 md:py-32 lg:py-40 bg-secondary rounded-lg">
           <div className="container px-4 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
               <div className="space-y-4">
@@ -54,7 +54,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary -mx-4 px-4 md:-mx-6 md:px-6">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary rounded-lg">
           <div className="container px-4 md:px-6">
             <div className="text-center space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Building a Sustainable Future... with Precision</h2>
