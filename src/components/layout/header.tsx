@@ -106,7 +106,8 @@ function MobileNav() {
          </div>
          <nav className="grid gap-2 text-lg font-medium px-4">
           <Accordion type="multiple" className="w-full">
-             {NAV_LINKS.filter(link => !!link.subLinks).map((link) => (
+            {NAV_LINKS.map((link) => (
+              link.subLinks ? (
                <AccordionItem value={link.label} key={link.label} className="border-b-0">
                  <AccordionTrigger className="text-muted-foreground hover:text-foreground hover:no-underline py-3 text-base flex justify-between items-center w-full">
                   <span>{link.label}</span>
@@ -134,19 +135,19 @@ function MobileNav() {
                    ))}
                  </AccordionContent>
                </AccordionItem>
-             ))}
-           </Accordion>
-            {NAV_LINKS.filter(link => !link.subLinks).map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="block text-muted-foreground hover:text-foreground py-3 text-base"
-                prefetch={false}
-                onClick={() => setOpen(false)}
-              >
-                {link.label}
-              </Link>
+              ) : (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="block text-muted-foreground hover:text-foreground py-3 text-base"
+                  prefetch={false}
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
+           </Accordion>
          </nav>
        </SheetContent>
     </Sheet>
