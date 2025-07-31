@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { Menu, ChevronLeft, ChevronDown } from "lucide-react";
-import { Logo } from "../icons/logo";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -21,6 +20,7 @@ import {
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -121,7 +121,7 @@ function MobileNav() {
       <SheetContent side="left" className="pr-0">
         <SheetTitle className="sr-only">Main Menu</SheetTitle>
         <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4 p-4" onClick={() => setOpen(false)}>
-          <Logo className="h-6 w-6 text-primary" />
+            <Image src="/megalogo11.jpg" alt="MEGA GEOSPATIAL Logo" width={32} height={32} className="rounded-md" />
           <span>MEGA GEOSPATIAL</span>
         </Link>
         <nav className="grid gap-2 text-lg font-medium px-4">
@@ -185,7 +185,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center px-4 md:px-6">
         <Link href="/" className="mr-6 flex items-center space-x-2" prefetch={false}>
-          <Logo className="h-6 w-6 text-primary" />
+          <Image src="/megalogo11.jpg" alt="MEGA GEOSPATIAL Logo" width={32} height={32} className="rounded-md" />
           <span className="font-bold hidden sm:inline-block">MEGA GEOSPATIAL</span>
         </Link>
 
