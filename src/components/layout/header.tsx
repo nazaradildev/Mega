@@ -138,17 +138,15 @@ function MobileNav() {
                  </AccordionContent>
                </AccordionItem>
               ) : (
-                 link.href === "/" ? null : (
-                    <Link
-                    key={link.label}
-                    href={link.href}
-                    className="block text-muted-foreground hover:text-foreground py-3 text-base"
-                    prefetch={false}
-                    onClick={() => setOpen(false)}
-                    >
-                    {link.label}
-                    </Link>
-                )
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="block text-muted-foreground hover:text-foreground py-3 text-base"
+                  prefetch={false}
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
               )
             ))}
            </Accordion>
