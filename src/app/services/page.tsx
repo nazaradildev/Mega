@@ -35,12 +35,12 @@ export default function ServicesPage() {
                 const Icon = serviceIcons[service.title] || Map;
                 return (
                   <Link href={service.href} key={service.title} className="flex">
-                    <Card className="flex flex-col w-full hover:shadow-lg transition-shadow duration-300">
+                    <Card className="flex flex-col w-full bg-card/50 backdrop-blur-lg border border-secondary hover:border-primary transition-all duration-300 transform hover:-translate-y-2">
                       <CardHeader className="flex flex-row items-center gap-4">
                         <Icon className="w-10 h-10 text-primary" />
                         <CardTitle>{service.title}</CardTitle>
                       </CardHeader>
-                      <CardContent className="flex flex-col flex-grow">
+                      <CardContent className="flex flex-col flex-grow p-6 pt-0">
                         <p className="text-muted-foreground flex-grow">{service.description}</p>
                         <div className="mt-4">
                           <Button variant="link" className="px-0 text-accent">

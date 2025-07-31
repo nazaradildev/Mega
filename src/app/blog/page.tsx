@@ -24,7 +24,7 @@ export default function BlogPage() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {BLOG_POSTS.map((post) => (
-                <Card key={post.title} className="overflow-hidden">
+                <Card key={post.title} className="overflow-hidden bg-card/50 backdrop-blur-lg border border-secondary hover:border-primary transition-all duration-300 transform hover:-translate-y-2">
                    <Link href={post.href}>
                     <Image
                       alt={post.title}

@@ -33,7 +33,7 @@ export default function MarketsPage() {
                 const Icon = marketIcons[market.title] || Building2;
                 return (
                   <Link href={market.href} key={market.title}>
-                    <div className="text-center p-6 rounded-lg hover:bg-accent/10 transition-colors border border-transparent hover:border-accent">
+                    <div className="flex flex-col items-center text-center p-6 rounded-lg hover:bg-accent/10 transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-accent">
                       <div className="flex justify-center mb-4">
                         <Icon className="w-16 h-16 text-primary" />
                       </div>
