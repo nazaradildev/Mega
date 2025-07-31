@@ -57,7 +57,7 @@ export default function RealEstateDevelopmentPage() {
               </div>
               <div className="space-y-6 text-center md:text-left p-8 bg-secondary rounded-lg">
                  <h2 className="text-3xl font-bold tracking-tighter">Turn your real estate vision into a successful project.</h2>
-                 <Button asChild size="lg" className="mt-4">
+                 <Button asChild className="mt-4 h-auto whitespace-normal text-base md:text-lg lg:h-11">
                     <Link href="/contact">Discuss Your Project with Our Experts</Link>
                  </Button>
               </div>
