@@ -19,6 +19,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
@@ -50,6 +51,24 @@ const NAV_LINKS = [
   { href: "/contact", label: "Contact Us" },
 ];
 
+function NavLink({ href, children }: { href: string, children: React.ReactNode }) {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+
+  return (
+    <Link
+      href={href}
+      className={cn(
+        "text-muted-foreground transition-colors hover:text-foreground",
+        isActive && "text-foreground font-semibold"
+      )}
+      prefetch={false}
+    >
+      {children}
+    </Link>
+  );
+}
+
 function DesktopNav() {
   return (
     <nav className="hidden md:flex md:items-center md:gap-5 lg:gap-6 flex-1">
@@ -73,14 +92,9 @@ function DesktopNav() {
             </DropdownMenuContent>
           </DropdownMenu>
         ) : (
-          <Link
-            key={link.label}
-            href={link.href}
-            className="text-muted-foreground transition-colors hover:text-foreground"
-            prefetch={false}
-          >
+          <NavLink key={link.label} href={link.href}>
             {link.label}
-          </Link>
+          </NavLink>
         )
       )}
     </nav>
@@ -105,16 +119,8 @@ function MobileNav() {
           <span>MEGA GEOSPATIAL</span>
         </Link>
         <nav className="grid gap-2 text-lg font-medium px-4">
-          <Accordion type="multiple" className="w-full">
-            <Link
-              href="/"
-              className="block text-muted-foreground hover:text-foreground py-3 text-base"
-              prefetch={false}
-              onClick={() => setOpen(false)}
-            >
-              Home
-            </Link>
-            {NAV_LINKS.filter(l => l.href !== '/').map((link) =>
+           <Accordion type="multiple" className="w-full">
+            {NAV_LINKS.map((link) =>
               link.subLinks ? (
                 <AccordionItem value={link.label} key={link.label} className="border-b-0">
                   <AccordionTrigger className="text-muted-foreground hover:text-foreground hover:no-underline py-3 text-base flex justify-between items-center w-full group">
@@ -163,11 +169,11 @@ function MobileNav() {
 }
 
 export function Header() {
-  const [isClient, setIsClient] = useState(false)
+    const [isClient, setIsClient] = useState(false)
 
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
+    useEffect(() => {
+        setIsClient(true)
+    }, [])
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
