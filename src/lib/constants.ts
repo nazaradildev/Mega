@@ -85,7 +85,7 @@ export const BLOG_POSTS = [
   {
     title: "Sell and Rent Faster: The Power of Virtual Tours in the UAE Real Estate Market",
     excerpt: "In the competitive UAE real estate market, traditional photos are no longer enough. Discover how virtual tours and professional photography enable you to reach a global audience, accelerate rental and sale decisions, and enhance your brand.",
-    image: "https://placehold.co/550x310.png",
+    image: "/blog2.png",
     imageHint: "virtual tour real estate",
     href: "/blog/power-of-virtual-tours-in-uae-real-estate",
   },
@@ -111,3 +111,4 @@ export const BLOG_POSTS = [
     href: "/blog/the-future-of-urban-analysis-with-satellite-imagery-and-ai",
   },
 ];
+
