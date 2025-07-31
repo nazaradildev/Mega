@@ -8,31 +8,45 @@ import { Logo } from "../icons/logo";
 
 export function Header() {
   const navLinks = [
-    { href: "#services", label: "الخدمات" },
-    { href: "#team", label: "فريقنا" },
-    { href: "#blog", label: "المدونة" },
-    { href: "#contact", label: "اتصل بنا" },
+    { href: "/#about", label: "About Us" },
+    { href: "/#services", label: "Services" },
+    { href: "/#sectors", label: "Sectors" },
+    { href: "/#blog", label: "Blog" },
+    { href: "/#contact", label: "Contact Us" },
   ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
-        <div className="flex items-center gap-4 md:ml-auto ml-4">
-          <Button className="hidden md:flex">
-             <a href="#contact">ابدأ</a>
-          </Button>
+        <Link href="/" className="mr-6 flex items-center space-x-2" prefetch={false}>
+          <Logo className="h-6 w-6 text-primary" />
+          <span className="font-bold hidden sm:inline-block">MEGA GEOSPATIAL</span>
+        </Link>
+        <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6 flex-1">
+          {navLinks.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className="text-muted-foreground transition-colors hover:text-foreground"
+              prefetch={false}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+        <div className="flex items-center gap-4 ml-auto">
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden">
                 <Menu className="h-5 w-5" />
-                <span className="sr-only">فتح قائمة التنقل</span>
+                <span className="sr-only">Open navigation menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
+            <SheetContent side="left">
               <nav className="grid gap-6 text-lg font-medium">
-                <Link href="#" className="flex items-center gap-2 text-lg font-semibold" prefetch={false}>
+                <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4" prefetch={false}>
                   <Logo className="h-6 w-6 text-primary" />
-                  <span>رؤى جغرافية</span>
+                  <span>MEGA GEOSPATIAL</span>
                 </Link>
                 {navLinks.map((link) => (
                   <Link
@@ -47,23 +61,12 @@ export function Header() {
               </nav>
             </SheetContent>
           </Sheet>
+           <Link href="/#contact" className="hidden md:flex">
+             <Button>
+                Get a Quote
+             </Button>
+           </Link>
         </div>
-        <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6 flex-1 justify-end">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="text-muted-foreground transition-colors hover:text-foreground"
-              prefetch={false}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-        <Link href="#" className="ml-6 flex items-center space-x-2" prefetch={false}>
-          <span className="font-bold">ملاح رؤى جغرافية</span>
-          <Logo className="h-6 w-6 text-primary" />
-        </Link>
       </div>
     </header>
   );

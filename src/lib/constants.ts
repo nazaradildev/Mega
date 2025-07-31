@@ -1,89 +1,79 @@
-export const SERVICES = [
+export const HOME_SERVICES = [
   {
-    title: "مسح العقارات",
-    description: "مسوحات دقيقة لمعاملات العقارات والتطوير ونزاعات الحدود.",
+    title: "Real Estate Surveying Services",
+    description: "Certified solutions including change detection, virtual tours, and professional photography.",
+    href: "/services/real-estate",
   },
   {
-    title: "المسح الهندسي",
-    description: "قياسات وبيانات دقيقة لدعم تصميم الهندسة المدنية والإنشاءات.",
+    title: "Engineering Surveying Services",
+    description: "We use the latest technology to support the most demanding construction and engineering projects.",
+    href: "/services/engineering",
   },
   {
-    title: "مسح الإنشاءات",
-    description: "خدمات التخطيط والمراقبة لضمان بناء المشاريع وفقًا للمواصفات.",
+    title: "Satellite Imagery Analysis",
+    description: "We provide a comprehensive view from space to monitor changes and analyze large-scale sites.",
+    href: "/services/satellite-imagery",
   },
   {
-    title: "مسح الحدود",
-    description: "تحديد وتعليم خطوط الملكية بشكل قانوني لملاك الأراضي والمطورين.",
+    title: "Photogrammetry & Drone Surveys",
+    description: "We efficiently collect high-accuracy spatial data through advanced aerial imaging.",
+    href: "/services/photogrammetry",
   },
   {
-    title: "المسح الطبوغرافي",
-    description: "رسم خرائط مفصلة للمعالم الطبيعية والاصطناعية لقطعة أرض.",
+    title: "Hydrographic Engineering",
+    description: "We survey and map water bodies with high precision to support maritime navigation.",
+    href: "/services/hydrographic",
   },
   {
-    title: "مسوحات ALTA/NSPS لسندات الملكية",
-    description: "مسوحات شاملة تلبي الاحتياجات المحددة لشركات التأمين على الملكية.",
-  },
-  {
-    title: "المسح الجوي ورسم الخرائط",
-    description: "صور جوية عالية الدقة وجمع بيانات للمشاريع واسعة النطاق.",
-  },
-  {
-    title: "المسح بالليزر ثلاثي الأبعاد",
-    description: "التقاط بيئات وهياكل معقدة بسحب نقطية ثلاثية الأبعاد عالية الدقة.",
-  },
-  {
-    title: "نظم المعلومات الجغرافية (GIS)",
-    description: "تحليل وإدارة وتصور البيانات الجغرافية المكانية لدعم اتخاذ القرار.",
-  },
-  {
-    title: "ليدار",
-    description: "تقنية استشعار عن بعد متقدمة لإنشاء نماذج ارتفاع ثلاثية الأبعاد مفصلة.",
-  },
-  {
-    title: "نمذجة التضاريس الرقمية (DTM)",
-    description: "إنشاء نماذج رقمية لسطح الأرض لمختلف التطبيقات.",
-  },
-  {
-    title: "المسح الحجمي",
-    description: "حساب أحجام المخزونات والحفريات والمواد الأخرى بدقة عالية.",
+    title: "Geodetic Surveying",
+    description: "We establish ultra-precise reference systems for major projects and national infrastructure.",
+    href: "/services/geodetic",
   },
 ];
 
-export const TEAM_MEMBERS = [
+export const SECTORS_SERVED = [
+    { title: "Real Estate & Urban Development" },
+    { title: "Infrastructure & Energy" },
+    { title: "Agriculture & Food Security" },
+    { title: "Natural Resources & Environment" },
+];
+
+export const WHY_CHOOSE_US = [
   {
-    name: "د. إيفلين ريد",
-    role: "كبير علماء الجغرافيا المكانية",
-    avatar: "https://placehold.co/150x150.png",
+    title: "Unmatched Accuracy",
+    description: "We use state-of-the-art technology to guarantee the highest levels of accuracy in our data.",
   },
   {
-    name: "ماركوس ثورن",
-    role: "مهندس مسح رئيسي",
-    avatar: "https://placehold.co/150x150.png",
+    title: "Expert Team",
+    description: "Highly experienced engineers and surveyors committed to excellence.",
   },
   {
-    name: "ياسمين تشين",
-    role: "رئيسة نظم المعلومات الجغرافية وتحليلات البيانات",
-    avatar: "https://placehold.co/150x150.png",
+    title: "Innovative Solutions",
+    description: "We think outside the box to deliver effective and creative solutions for your challenges.",
+  },
+  {
+    title: "Commitment to Quality",
+    description: "We apply the highest standards of quality and safety in all project phases.",
   },
 ];
 
 export const BLOG_POSTS = [
   {
-    title: "مستقبل التخطيط الحضري باستخدام المسح بالليزر ثلاثي الأبعاد",
-    excerpt: "اكتشف كيف تُحدث السحب النقطية عالية الكثافة ثورة في طريقة تصميمنا وبناء المدن.",
+    title: "How Drones Are Accelerating Construction Projects",
+    excerpt: "Discover how unmanned aerial vehicles have revolutionized data collection on construction sites, saving time and reducing costs.",
     image: "https://placehold.co/550x310.png",
-    imageHint: "city skyline",
+    imageHint: "drone construction",
   },
   {
-    title: "ليدار مقابل التصوير المساحي: اختيار الأداة المناسبة",
-    excerpt: "نظرة عميقة في إيجابيات وسلبيات تقنيتين رائدتين في رسم الخرائط الجوية.",
+    title: "The Importance of Bathymetric Surveys in Port Development",
+    excerpt: "An in-depth look at how accurate depth maps contribute to ensuring safe navigation and designing marine structures efficiently.",
     image: "https://placehold.co/550x310.png",
-    imageHint: "drone aerial",
+    imageHint: "port development",
   },
   {
-    title: "دراسة حالة: مسح ALTA لمشروع تطوير تجاري كبير",
-    excerpt: "كيف قدم فريقنا مسح ALTA/NSPS معقدًا في الوقت المحدد وبأقل من الميزانية.",
+    title: "The Future of Urban Analysis with Satellite Imagery and AI",
+    excerpt: "We explore how combining space data and artificial intelligence can help build smarter, more sustainable cities.",
     image: "https://placehold.co/550x310.png",
-    imageHint: "construction site",
+    imageHint: "city satellite",
   },
 ];
