@@ -38,7 +38,7 @@ export default function Home() {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-background to-transparent z-10"></div>
           <Image
-            src="https://placehold.co/1920x1080.png"
+            src="/megahero1.png"
             alt="Abstract background"
             fill
             sizes="100vw"
@@ -86,7 +86,7 @@ export default function Home() {
               </div>
               <div className="relative h-64 md:h-full">
                 <Image
-                  src="https://placehold.co/600x400.png"
+                  src="/about1.png"
                   alt="Team working"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
