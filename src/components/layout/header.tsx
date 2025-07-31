@@ -21,43 +21,42 @@ import {
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
+const NAV_LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { 
+    href: "/services", 
+    label: "Services",
+    subLinks: [
+      { href: "/services/real-estate", label: "Real Estate Surveying" },
+      { href: "/services/engineering", label: "Engineering Surveying" },
+      { href: "/services/satellite-imagery", label: "Satellite Imagery Analysis" },
+      { href: "/services/photogrammetry", label: "Photogrammetry & Drone Surveys" },
+      { href: "/services/hydrographic", label: "Hydrographic Engineering" },
+      { href: "/services/geodetic", label: "Geodetic Surveying" },
+    ] 
+  },
+  { 
+    href: "/markets", 
+    label: "Markets",
+    subLinks: [
+      { href: "/markets/real-estate-development", label: "Real Estate & Urban Development" },
+      { href: "/markets/infrastructure-energy", label: "Infrastructure & Energy" },
+      { href: "/markets/agriculture-food-security", label: "Agriculture & Food Security" },
+      { href: "/markets/natural-resources-environment", label: "Natural Resources & Environment" },
+    ]
+  },
+  { href: "/blog", label: "Blog" },
+  { href: "/contact", label: "Contact Us" },
+];
+
 export function Header() {
   const [isClient, setIsClient] = useState(false)
   const [openMobile, setOpenMobile] = useState(false);
 
-
   useEffect(() => {
     setIsClient(true)
   }, [])
-  
-  const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
-    { 
-      href: "/services", 
-      label: "Services",
-      subLinks: [
-        { href: "/services/real-estate", label: "Real Estate Surveying" },
-        { href: "/services/engineering", label: "Engineering Surveying" },
-        { href: "/services/satellite-imagery", label: "Satellite Imagery Analysis" },
-        { href: "/services/photogrammetry", label: "Photogrammetry & Drone Surveys" },
-        { href: "/services/hydrographic", label: "Hydrographic Engineering" },
-        { href: "/services/geodetic", label: "Geodetic Surveying" },
-      ] 
-    },
-    { 
-      href: "/markets", 
-      label: "Markets",
-      subLinks: [
-        { href: "/markets/real-estate-development", label: "Real Estate & Urban Development" },
-        { href: "/markets/infrastructure-energy", label: "Infrastructure & Energy" },
-        { href: "/markets/agriculture-food-security", label: "Agriculture & Food Security" },
-        { href: "/markets/natural-resources-environment", label: "Natural Resources & Environment" },
-      ]
-    },
-    { href: "/blog", label: "Blog" },
-    { href: "/contact", label: "Contact Us" },
-  ];
   
   const handleLinkClick = () => {
     setOpenMobile(false);
@@ -71,7 +70,7 @@ export function Header() {
           <span className="font-bold hidden sm:inline-block">MEGA GEOSPATIAL</span>
         </Link>
         <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6 flex-1">
-          {navLinks.map((link) => (
+          {NAV_LINKS.map((link) => (
             link.subLinks ? (
               <DropdownMenu key={link.label}>
                 <DropdownMenuTrigger asChild>
@@ -120,14 +119,17 @@ export function Header() {
                  </div>
                  <nav className="grid gap-2 text-lg font-medium px-4">
                    <Accordion type="multiple" className="w-full">
-                     {navLinks.map((link) =>
+                     {NAV_LINKS.map((link) =>
                        link.subLinks ? (
                          <AccordionItem value={link.label} key={link.label} className="border-b-0">
                            <AccordionTrigger className="text-muted-foreground hover:text-foreground hover:no-underline py-3 text-base flex justify-between items-center w-full">
                             <Link href={link.href} onClick={handleLinkClick}>{link.label}</Link>
-                            <ChevronLeft className="h-5 w-5 text-primary transition-transform duration-200 group-[&[data-state=open]]:-rotate-90" />
                            </AccordionTrigger>
                            <AccordionContent className="pl-6 pb-2">
+                            <div className="flex items-center justify-between w-full">
+                                <Link href={link.href} onClick={handleLinkClick}>{link.label}</Link>
+                                <ChevronLeft className="h-5 w-5 text-primary transition-transform duration-200 group-[&[data-state=open]]:-rotate-90" />
+                            </div>
                              {link.subLinks.map((subLink) => (
                                <Link
                                  key={subLink.label}
