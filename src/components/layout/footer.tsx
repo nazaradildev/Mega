@@ -18,6 +18,7 @@ export function Footer() {
         <div className="space-y-4">
             <h3 className="text-xl font-bold">Quick Links</h3>
             <ul className="space-y-2">
+                <li><Link href="/" className="text-muted-foreground hover:text-foreground">Home</Link></li>
                 <li><Link href="/about" className="text-muted-foreground hover:text-foreground">About Us</Link></li>
                 <li><Link href="/services" className="text-muted-foreground hover:text-foreground">Services</Link></li>
                 <li><Link href="/markets" className="text-muted-foreground hover:text-foreground">Markets</Link></li>
