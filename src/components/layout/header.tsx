@@ -51,7 +51,7 @@ const NAV_LINKS = [
   { href: "/contact", label: "Contact Us" },
 ];
 
-function NavLink({ href, children }: { href: string, children: React.ReactNode }) {
+function NavLink({ href, children, className }: { href: string, children: React.ReactNode, className?: string }) {
   const pathname = usePathname();
   const isActive = pathname === href;
 
@@ -60,7 +60,8 @@ function NavLink({ href, children }: { href: string, children: React.ReactNode }
       href={href}
       className={cn(
         "text-muted-foreground transition-colors hover:text-foreground",
-        isActive && "text-foreground font-semibold"
+        isActive && "text-foreground font-semibold",
+        className
       )}
       prefetch={false}
     >
@@ -98,7 +99,7 @@ function DesktopNav() {
             </DropdownMenuContent>
           </DropdownMenu>
         ) : (
-          <NavLink key={link.label} href={link.href}>
+          <NavLink key={link.label} href={link.href} className="px-2">
             {link.label}
           </NavLink>
         )
@@ -122,7 +123,7 @@ function MobileNav() {
         <SheetTitle className="sr-only">Main Menu</SheetTitle>
         <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4 p-4" onClick={() => setOpen(false)}>
             <Image src="/megalogo11.jpg" alt="MEGA GEOSPATIAL Logo" width={120} height={40} className="rounded-md object-contain h-10 w-auto" />
-          <span>MEGA GEOSPATIAL</span>
+          <span className="sr-only">MEGA GEOSPATIAL</span>
         </Link>
         <nav className="grid gap-2 text-lg font-medium px-4">
            <Accordion type="multiple" className="w-full">
@@ -186,7 +187,7 @@ export function Header() {
       <div className="container flex h-16 max-w-screen-2xl items-center px-4 md:px-6">
         <Link href="/" className="mr-6 flex items-center space-x-2" prefetch={false}>
           <Image src="/megalogo11.jpg" alt="MEGA GEOSPATIAL Logo" width={120} height={40} className="rounded-md object-contain h-10 w-auto" />
-          <span className="font-bold hidden sm:inline-block"></span>
+          <span className="font-bold hidden sm:inline-block sr-only">MEGA GEOSPATIAL</span>
         </Link>
 
         <DesktopNav />
