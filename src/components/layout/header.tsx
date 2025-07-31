@@ -53,9 +53,9 @@ const NAV_LINKS = [
 function DesktopNav() {
   return (
     <nav className="hidden md:flex md:items-center md:gap-5 lg:gap-6 flex-1">
-      {NAV_LINKS.map((link) => (
+      {NAV_LINKS.map((link) =>
         link.subLinks ? (
-          <DropdownMenu key={link.href}>
+          <DropdownMenu key={link.label}>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="text-muted-foreground hover:text-foreground px-2">
                 {link.label}
@@ -63,7 +63,7 @@ function DesktopNav() {
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuItem asChild>
-                 <Link href={link.href}>All {link.label}</Link>
+                <Link href={link.href}>All {link.label}</Link>
               </DropdownMenuItem>
               {link.subLinks.map((subLink) => (
                 <DropdownMenuItem key={subLink.href} asChild>
@@ -74,7 +74,7 @@ function DesktopNav() {
           </DropdownMenu>
         ) : (
           <Link
-            key={link.href}
+            key={link.label}
             href={link.href}
             className="text-muted-foreground transition-colors hover:text-foreground"
             prefetch={false}
@@ -82,7 +82,7 @@ function DesktopNav() {
             {link.label}
           </Link>
         )
-      ))}
+      )}
     </nav>
   );
 }
@@ -99,24 +99,30 @@ function MobileNav() {
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="pr-0">
-         <SheetTitle className="sr-only">Main Menu</SheetTitle>
-         <div className="flex items-center gap-2 text-lg font-semibold mb-4 p-4">
-           <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-            <Logo className="h-6 w-6 text-primary" />
-            <span>MEGA GEOSPATIAL</span>
-           </Link>
-         </div>
-         <nav className="grid gap-2 text-lg font-medium px-4">
+        <SheetTitle className="sr-only">Main Menu</SheetTitle>
+        <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4 p-4" onClick={() => setOpen(false)}>
+          <Logo className="h-6 w-6 text-primary" />
+          <span>MEGA GEOSPATIAL</span>
+        </Link>
+        <nav className="grid gap-2 text-lg font-medium px-4">
           <Accordion type="multiple" className="w-full">
-            {NAV_LINKS.map((link) => (
+            <Link
+              href="/"
+              className="block text-muted-foreground hover:text-foreground py-3 text-base"
+              prefetch={false}
+              onClick={() => setOpen(false)}
+            >
+              Home
+            </Link>
+            {NAV_LINKS.filter(l => l.href !== '/').map((link) =>
               link.subLinks ? (
-               <AccordionItem value={link.label} key={link.href} className="border-b-0">
-                 <AccordionTrigger className="text-muted-foreground hover:text-foreground hover:no-underline py-3 text-base flex justify-between items-center w-full group">
-                  <span>{link.label}</span>
-                   <ChevronLeft className="h-5 w-5 text-primary transition-transform duration-200 group-data-[state=open]:-rotate-90" />
-                 </AccordionTrigger>
-                 <AccordionContent className="pl-6 pb-2">
-                   <Link
+                <AccordionItem value={link.label} key={link.label} className="border-b-0">
+                  <AccordionTrigger className="text-muted-foreground hover:text-foreground hover:no-underline py-3 text-base flex justify-between items-center w-full group">
+                    <span>{link.label}</span>
+                    <ChevronLeft className="h-5 w-5 text-primary transition-transform duration-200 group-data-[state=open]:-rotate-90" />
+                  </AccordionTrigger>
+                  <AccordionContent className="pl-6 pb-2">
+                    <Link
                       href={link.href}
                       className="block text-muted-foreground hover:text-foreground py-2 text-base"
                       prefetch={false}
@@ -124,22 +130,22 @@ function MobileNav() {
                     >
                       All {link.label}
                     </Link>
-                   {link.subLinks?.map((subLink) => (
-                     <Link
-                       key={subLink.href}
-                       href={subLink.href}
-                       className="block text-muted-foreground hover:text-foreground py-2 text-base"
-                       prefetch={false}
-                       onClick={() => setOpen(false)}
-                     >
-                       {subLink.label}
-                     </Link>
-                   ))}
-                 </AccordionContent>
-               </AccordionItem>
+                    {link.subLinks?.map((subLink) => (
+                      <Link
+                        key={subLink.href}
+                        href={subLink.href}
+                        className="block text-muted-foreground hover:text-foreground py-2 text-base"
+                        prefetch={false}
+                        onClick={() => setOpen(false)}
+                      >
+                        {subLink.label}
+                      </Link>
+                    ))}
+                  </AccordionContent>
+                </AccordionItem>
               ) : (
                 <Link
-                  key={link.href}
+                  key={link.label}
                   href={link.href}
                   className="block text-muted-foreground hover:text-foreground py-3 text-base"
                   prefetch={false}
@@ -148,12 +154,12 @@ function MobileNav() {
                   {link.label}
                 </Link>
               )
-            ))}
-           </Accordion>
-         </nav>
-       </SheetContent>
+            )}
+          </Accordion>
+        </nav>
+      </SheetContent>
     </Sheet>
-  )
+  );
 }
 
 export function Header() {
@@ -162,10 +168,10 @@ export function Header() {
   useEffect(() => {
     setIsClient(true)
   }, [])
-  
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className={cn("container flex h-14 max-w-screen-2xl items-center px-4 md:px-6")}>
+      <div className="container flex h-14 max-w-screen-2xl items-center px-4 md:px-6">
         <Link href="/" className="mr-6 flex items-center space-x-2" prefetch={false}>
           <Logo className="h-6 w-6 text-primary" />
           <span className="font-bold hidden sm:inline-block">MEGA GEOSPATIAL</span>
@@ -174,12 +180,12 @@ export function Header() {
         <DesktopNav />
         
         <div className="flex items-center gap-4 ml-auto">
-           {isClient && <MobileNav />}
-           <Link href="/contact" className="hidden md:flex">
-             <Button>
-                Get a Quote
-             </Button>
-           </Link>
+          {isClient && <MobileNav />}
+          <Link href="/contact" className="hidden md:flex">
+            <Button>
+              Get a Quote
+            </Button>
+          </Link>
         </div>
       </div>
     </header>
