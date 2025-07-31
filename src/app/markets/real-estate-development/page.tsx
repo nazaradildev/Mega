@@ -18,14 +18,24 @@ export default function RealEstateDevelopmentPage() {
       <main>
         <section className="w-full py-20 md:py-32 lg:py-40 bg-secondary">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center text-center">
-              <div className="space-y-4 max-w-3xl">
+            <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
+              <div className="space-y-4">
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
                   Empowering Real Estate & Urban Development with Precise Spatial Data
                 </h1>
                 <p className="text-muted-foreground md:text-xl/relaxed">
                   We provide developers, planners, and consultants with the precise tools and data they need to turn their visions into reality, from feasibility studies to marketing and management.
                 </p>
+              </div>
+              <div className="relative h-96">
+                <Image
+                  src="/market1.png"
+                  alt="Real Estate Development"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="rounded-xl object-cover"
+                  data-ai-hint="cityscape development"
+                />
               </div>
             </div>
           </div>
