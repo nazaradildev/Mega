@@ -50,10 +50,10 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_700px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-4">
-                  <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-foreground">
+                  <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white">
                     Shaping the Future with Ultimate Precision
                   </h1>
-                  <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                  <p className="max-w-[600px] text-gray-200 md:text-xl">
                     Innovative geospatial solutions and advanced surveying technologies that empower your projects to achieve the highest standards of accuracy and efficiency in the UAE.
                   </p>
                 </div>
@@ -86,7 +86,7 @@ export default function Home() {
               </div>
               <div className="relative h-64 md:h-full">
                 <Image
-                  src="/about1.png"
+                  src="https://placehold.co/600x400.png"
                   alt="Team working"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -165,7 +165,7 @@ export default function Home() {
             <div className="grid gap-10 md:grid-cols-2 lg:gap-16 items-center">
               <div className="relative h-64 md:h-full">
                 <Image
-                  src="/about1.png"
+                  src="https://placehold.co/600x400.png"
                   alt="Surveying equipment"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
