@@ -106,7 +106,7 @@ export const BLOG_POSTS = [
   {
     title: "The Future of Urban Analysis with Satellite Imagery and AI",
     excerpt: "We explore how combining space data and artificial intelligence can help build smarter, more sustainable cities.",
-    image: "https://placehold.co/550x310.png",
+    image: "/blog5.png",
     imageHint: "city satellite AI",
     href: "/blog/the-future-of-urban-analysis-with-satellite-imagery-and-ai",
   },
