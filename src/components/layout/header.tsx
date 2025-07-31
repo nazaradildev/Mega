@@ -101,8 +101,10 @@ function MobileNav() {
       <SheetContent side="left" className="pr-0">
          <SheetTitle className="sr-only">Main Menu</SheetTitle>
          <div className="flex items-center gap-2 text-lg font-semibold mb-4 p-4">
-           <Logo className="h-6 w-6 text-primary" />
-           <span>MEGA GEOSPATIAL</span>
+           <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
+            <Logo className="h-6 w-6 text-primary" />
+            <span>MEGA GEOSPATIAL</span>
+           </Link>
          </div>
          <nav className="grid gap-2 text-lg font-medium px-4">
           <Accordion type="multiple" className="w-full">
@@ -136,15 +138,17 @@ function MobileNav() {
                  </AccordionContent>
                </AccordionItem>
               ) : (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="block text-muted-foreground hover:text-foreground py-3 text-base"
-                  prefetch={false}
-                  onClick={() => setOpen(false)}
-                >
-                  {link.label}
-                </Link>
+                 link.href === "/" ? null : (
+                    <Link
+                    key={link.label}
+                    href={link.href}
+                    className="block text-muted-foreground hover:text-foreground py-3 text-base"
+                    prefetch={false}
+                    onClick={() => setOpen(false)}
+                    >
+                    {link.label}
+                    </Link>
+                )
               )
             ))}
            </Accordion>
