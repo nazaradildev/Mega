@@ -26,7 +26,7 @@ export default function SatelliteImageryPage() {
 
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <ul className="space-y-4">
                   {SERVICES.map((service, index) => (
@@ -39,7 +39,7 @@ export default function SatelliteImageryPage() {
               </div>
               <div className="space-y-6 text-center md:text-left p-8 bg-secondary rounded-lg">
                  <h2 className="text-3xl font-bold tracking-tighter">Discover what space data holds for you.</h2>
-                 <Button asChild size="lg">
+                 <Button asChild size="lg" className="mt-4">
                     <Link href="/contact">Request a Consultation with Our Specialists</Link>
                  </Button>
               </div>
