@@ -6,13 +6,13 @@ export function Footer() {
   return (
     <footer className="w-full bg-secondary text-secondary-foreground py-12 md:py-16">
       <div className="container grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-8">
-        <div className="space-y-4 col-span-1 md:col-span-2 lg:col-span-1">
+        <div className="space-y-4 col-span-1 md:col-span-4 lg:col-span-1">
           <Link href="/" className="flex items-center space-x-2" prefetch={false}>
             <Logo className="h-8 w-8 text-primary" />
             <span className="text-xl font-bold">MEGA GEOSPATIAL</span>
           </Link>
           <p className="text-muted-foreground">
-            Precise geospatial solutions for a complex world.
+            Shaping the Future with Ultimate Precision.
           </p>
         </div>
         <div className="space-y-4">
