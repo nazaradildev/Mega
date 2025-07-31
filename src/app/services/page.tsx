@@ -34,20 +34,22 @@ export default function ServicesPage() {
               {HOME_SERVICES.map((service) => {
                 const Icon = serviceIcons[service.title] || Map;
                 return (
-                  <Card key={service.title} className="flex flex-col">
-                    <CardHeader className="flex flex-row items-center gap-4">
-                      <Icon className="w-10 h-10 text-primary" />
-                      <CardTitle>{service.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex flex-col flex-grow">
-                      <p className="text-muted-foreground flex-grow">{service.description}</p>
-                      <Link href={service.href} className="mt-4">
-                        <Button variant="link" className="px-0 text-accent">
-                          Discover More <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                      </Link>
-                    </CardContent>
-                  </Card>
+                  <Link href={service.href} key={service.title} className="flex">
+                    <Card className="flex flex-col w-full hover:shadow-lg transition-shadow duration-300">
+                      <CardHeader className="flex flex-row items-center gap-4">
+                        <Icon className="w-10 h-10 text-primary" />
+                        <CardTitle>{service.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="flex flex-col flex-grow">
+                        <p className="text-muted-foreground flex-grow">{service.description}</p>
+                        <div className="mt-4">
+                          <Button variant="link" className="px-0 text-accent">
+                            Discover More <ArrowRight className="ml-2 h-4 w-4" />
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 );
               })}
             </div>
