@@ -51,7 +51,7 @@ const NAV_LINKS = [
   { href: "/contact", label: "Contact Us" },
 ];
 
-function NavLink({ href, children, className }: { href: string, children: React.ReactNode, className?: string }) {
+function NavLink({ href, children, className, onClick }: { href: string, children: React.ReactNode, className?: string, onClick?: () => void }) {
   const pathname = usePathname();
   const isActive = pathname === href;
 
@@ -64,6 +64,7 @@ function NavLink({ href, children, className }: { href: string, children: React.
         className
       )}
       prefetch={false}
+      onClick={onClick}
     >
       {children}
     </Link>
@@ -81,7 +82,7 @@ function DesktopNav() {
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className={cn(
                 "text-muted-foreground hover:text-foreground px-2 flex items-center gap-1 group",
-                (link.subLinks.some(sub => pathname.startsWith(sub.href)) || pathname === link.href) && "text-foreground font-semibold"
+                (pathname.startsWith(link.href)) && "text-foreground font-semibold"
               )}>
                 {link.label}
                 <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
@@ -125,51 +126,47 @@ function MobileNav() {
             <Image src="/megalogo11.jpg" alt="MEGA GEOSPATIAL Logo" width={120} height={40} className="rounded-md object-contain h-10 w-auto" />
           <span className="sr-only">MEGA GEOSPATIAL</span>
         </Link>
-        <nav className="grid gap-2 text-lg font-medium px-4">
+        <div className="px-4">
            <Accordion type="multiple" className="w-full">
             {NAV_LINKS.map((link) =>
               link.subLinks ? (
                 <AccordionItem value={link.label} key={link.label} className="border-b-0">
                   <AccordionTrigger className="text-muted-foreground hover:text-foreground hover:no-underline py-3 text-base flex justify-between items-center w-full group">
                     <span>{link.label}</span>
-                    <ChevronDown className="h-5 w-5 text-primary transition-transform duration-200 group-data-[state=open]:rotate-180" />
                   </AccordionTrigger>
                   <AccordionContent className="pl-6 pb-2">
-                    <Link
+                    <NavLink
                       href={link.href}
-                      className="block text-muted-foreground hover:text-foreground py-2 text-base"
-                      prefetch={false}
+                      className="block py-2 text-base"
                       onClick={() => setOpen(false)}
                     >
                       All {link.label}
-                    </Link>
+                    </NavLink>
                     {link.subLinks?.map((subLink) => (
-                      <Link
+                      <NavLink
                         key={subLink.href}
                         href={subLink.href}
-                        className="block text-muted-foreground hover:text-foreground py-2 text-base"
-                        prefetch={false}
+                        className="block py-2 text-base"
                         onClick={() => setOpen(false)}
                       >
                         {subLink.label}
-                      </Link>
+                      </NavLink>
                     ))}
                   </AccordionContent>
                 </AccordionItem>
               ) : (
-                <Link
+                 <NavLink
                   key={link.label}
                   href={link.href}
-                  className="block text-muted-foreground hover:text-foreground py-3 text-base"
-                  prefetch={false}
+                  className="block py-3 text-base border-b-0"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
-                </Link>
+                </NavLink>
               )
             )}
           </Accordion>
-        </nav>
+        </div>
       </SheetContent>
     </Sheet>
   );
