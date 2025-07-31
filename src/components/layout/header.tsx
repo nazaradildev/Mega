@@ -55,7 +55,7 @@ function DesktopNav() {
     <nav className="hidden md:flex md:items-center md:gap-5 lg:gap-6 flex-1">
       {NAV_LINKS.map((link) => (
         link.subLinks ? (
-          <DropdownMenu key={link.label}>
+          <DropdownMenu key={link.href}>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="text-muted-foreground hover:text-foreground px-2">
                 {link.label}
@@ -66,7 +66,7 @@ function DesktopNav() {
                  <Link href={link.href}>All {link.label}</Link>
               </DropdownMenuItem>
               {link.subLinks.map((subLink) => (
-                <DropdownMenuItem key={subLink.label} asChild>
+                <DropdownMenuItem key={subLink.href} asChild>
                   <Link href={subLink.href}>{subLink.label}</Link>
                 </DropdownMenuItem>
               ))}
@@ -74,7 +74,7 @@ function DesktopNav() {
           </DropdownMenu>
         ) : (
           <Link
-            key={link.label}
+            key={link.href}
             href={link.href}
             className="text-muted-foreground transition-colors hover:text-foreground"
             prefetch={false}
@@ -110,7 +110,7 @@ function MobileNav() {
           <Accordion type="multiple" className="w-full">
             {NAV_LINKS.map((link) => (
               link.subLinks ? (
-               <AccordionItem value={link.label} key={link.label} className="border-b-0">
+               <AccordionItem value={link.label} key={link.href} className="border-b-0">
                  <AccordionTrigger className="text-muted-foreground hover:text-foreground hover:no-underline py-3 text-base flex justify-between items-center w-full group">
                   <span>{link.label}</span>
                    <ChevronLeft className="h-5 w-5 text-primary transition-transform duration-200 group-data-[state=open]:-rotate-90" />
@@ -126,7 +126,7 @@ function MobileNav() {
                     </Link>
                    {link.subLinks?.map((subLink) => (
                      <Link
-                       key={subLink.label}
+                       key={subLink.href}
                        href={subLink.href}
                        className="block text-muted-foreground hover:text-foreground py-2 text-base"
                        prefetch={false}
@@ -139,7 +139,7 @@ function MobileNav() {
                </AccordionItem>
               ) : (
                 <Link
-                  key={link.label}
+                  key={link.href}
                   href={link.href}
                   className="block text-muted-foreground hover:text-foreground py-3 text-base"
                   prefetch={false}
