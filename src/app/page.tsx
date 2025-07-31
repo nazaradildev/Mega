@@ -148,7 +148,7 @@ export default function Home() {
               {MARKETS_SERVED.map((market) => {
                 const Icon = marketIcons[market.title] || Building2;
                 return (
-                  <Link key={market.title} href={market.href}>
+                  <Link key={market.title} href={market.href} className="h-full">
                     <div className="group relative flex h-full flex-col items-center text-center p-6 rounded-lg bg-background/30 transition-all duration-300 hover:bg-background/50 hover:-translate-y-2">
                        <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg blur-md"></div>
                        <div className="relative z-10 flex flex-col items-center h-full">
