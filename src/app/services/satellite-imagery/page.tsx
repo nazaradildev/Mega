@@ -40,7 +40,7 @@ export default function SatelliteImageryPage() {
               </div>
               <div className="space-y-6 text-center lg:text-left p-8 bg-secondary rounded-lg">
                  <h2 className="text-3xl font-bold tracking-tighter">Discover what space data holds for you.</h2>
-                 <Button asChild size="lg" className="mt-4">
+                 <Button asChild className="mt-4 h-auto whitespace-normal text-base md:text-lg lg:h-11 lg:text-sm">
                     <Link href="/contact">Request a Consultation with Our Specialists</Link>
                  </Button>
               </div>
