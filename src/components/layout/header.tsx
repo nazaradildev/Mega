@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
-import { Menu, ChevronLeft } from "lucide-react";
+import { Menu, ChevronLeft, ChevronDown } from "lucide-react";
 import { Logo } from "../icons/logo";
 import {
   DropdownMenu,
@@ -70,14 +70,20 @@ function NavLink({ href, children }: { href: string, children: React.ReactNode }
 }
 
 function DesktopNav() {
+  const pathname = usePathname();
+
   return (
     <nav className="hidden md:flex md:items-center md:gap-5 lg:gap-6 flex-1">
       {NAV_LINKS.map((link) =>
         link.subLinks ? (
           <DropdownMenu key={link.label}>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="text-muted-foreground hover:text-foreground px-2">
+              <Button variant="ghost" className={cn(
+                "text-muted-foreground hover:text-foreground px-2 flex items-center gap-1 group",
+                (link.subLinks.some(sub => pathname.startsWith(sub.href)) || pathname === link.href) && "text-foreground font-semibold"
+              )}>
                 {link.label}
+                <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
@@ -125,7 +131,7 @@ function MobileNav() {
                 <AccordionItem value={link.label} key={link.label} className="border-b-0">
                   <AccordionTrigger className="text-muted-foreground hover:text-foreground hover:no-underline py-3 text-base flex justify-between items-center w-full group">
                     <span>{link.label}</span>
-                    <ChevronLeft className="h-5 w-5 text-primary transition-transform duration-200 group-data-[state=open]:-rotate-90" />
+                    <ChevronDown className="h-5 w-5 text-primary transition-transform duration-200 group-data-[state=open]:rotate-180" />
                   </AccordionTrigger>
                   <AccordionContent className="pl-6 pb-2">
                     <Link
