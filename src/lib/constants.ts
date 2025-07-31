@@ -60,6 +60,13 @@ export const WHY_CHOOSE_US = [
 
 export const BLOG_POSTS = [
   {
+    title: "How Satellite Imagery Reveals Construction Changes on Properties",
+    excerpt: "Did you know that any new construction or modification on your property can be monitored from space? Discover how satellite imagery and specialized analysis provide an effective solution for property monitoring, ensuring regulatory compliance, and protecting asset value.",
+    image: "https://placehold.co/550x310.png",
+    imageHint: "satellite property monitoring",
+    href: "/blog/monitoring-your-property-from-space",
+  },
+  {
     title: "How Drones Are Accelerating Construction Projects",
     excerpt: "Discover how unmanned aerial vehicles have revolutionized data collection on construction sites, saving time and reducing costs.",
     image: "https://placehold.co/550x310.png",
