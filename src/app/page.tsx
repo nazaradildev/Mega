@@ -2,25 +2,24 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Map, Cog, HardHat, Scale, Layers3, ScanEye, Network, DatabaseZap, Mountain, ShipWheel, Waypoints, Landmark } from "lucide-react";
-import ServiceSuggester from "@/components/service-suggester";
+import { ArrowLeft, Map, Cog, HardHat, Scale, Layers3, ScanEye, Network, DatabaseZap, Mountain, ShipWheel, Waypoints, Landmark } from "lucide-react";
 import { TEAM_MEMBERS, BLOG_POSTS, SERVICES } from "@/lib/constants";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const iconMap: { [key: string]: React.ElementType } = {
-  "Real Estate Surveying": Map,
-  "Engineering Surveying": Cog,
-  "Construction Surveying": HardHat,
-  "Boundary Surveying": Scale,
-  "Topographic Surveying": Layers3,
-  "ALTA/NSPS Land Title Surveys": Landmark,
-  "Aerial Surveying & Mapping": Waypoints,
-  "3D Laser Scanning": ScanEye,
-  "Geographic Information Systems (GIS)": Network,
-  "Lidar": DatabaseZap,
-  "Digital Terrain Modeling (DTM)": Mountain,
-  "Volumetric Surveys": ShipWheel,
-  "Utility Mapping": Waypoints,
+  "مسح العقارات": Map,
+  "المسح الهندسي": Cog,
+  "مسح الإنشاءات": HardHat,
+  "مسح الحدود": Scale,
+  "المسح الطبوغرافي": Layers3,
+  "مسوحات ALTA/NSPS لسندات الملكية": Landmark,
+  "المسح الجوي ورسم الخرائط": Waypoints,
+  "المسح بالليزر ثلاثي الأبعاد": ScanEye,
+  "نظم المعلومات الجغرافية (GIS)": Network,
+  "ليدار": DatabaseZap,
+  "نمذجة التضاريس الرقمية (DTM)": Mountain,
+  "المسح الحجمي": ShipWheel,
+  "رسم خرائط المرافق": Waypoints,
 };
 
 export default function Home() {
@@ -30,26 +29,26 @@ export default function Home() {
         <section
           className="w-full pt-20 md:pt-32 lg:pt-40 pb-12 md:pb-24 lg:pb-32 bg-cover bg-center"
           style={{ backgroundImage: "linear-gradient(rgba(26, 22, 44, 0.8), rgba(26, 22, 44, 1)), url('https://placehold.co/1920x1080.png')", backgroundBlendMode: 'multiply' }}
-          data-ai-hint="abstract geometric background"
+          data-ai-hint="خلفية هندسية مجردة"
         >
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white">
-                    Navigate Your World with GeoInsights
+                    تنقل في عالمك مع رؤى جغرافية
                   </h1>
                   <p className="max-w-[600px] text-gray-300 md:text-xl">
-                    Precision geospatial solutions tailored for your projects. From land surveying to advanced 3D mapping, we provide the data you need to build with confidence.
+                    حلول جغرافية مكانية دقيقة مصممة خصيصًا لمشاريعك. من مسح الأراضي إلى رسم الخرائط ثلاثية الأبعاد المتقدمة، نحن نقدم البيانات التي تحتاجها للبناء بثقة.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <a href="#services">
-                    <Button size="lg">Explore Services</Button>
+                    <Button size="lg">استكشف الخدمات</Button>
                   </a>
                   <a href="#contact">
                     <Button size="lg" variant="secondary">
-                      Contact Us
+                      اتصل بنا
                     </Button>
                   </a>
                 </div>
@@ -62,10 +61,10 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <Badge>Our Solutions</Badge>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Comprehensive Geospatial Services</h2>
+                <Badge>حلولنا</Badge>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">خدمات جغرافية مكانية شاملة</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  We offer a full spectrum of services to meet the demands of any project, ensuring accuracy and reliability from start to finish.
+                  نحن نقدم مجموعة كاملة من الخدمات لتلبية متطلبات أي مشروع، مما يضمن الدقة والموثوقية من البداية إلى النهاية.
                 </p>
               </div>
             </div>
@@ -88,20 +87,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="ai-suggester" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
-          <div className="container px-4 md:px-6">
-            <ServiceSuggester />
-          </div>
-        </section>
-
         <section id="team" className="w-full py-12 md:py-24 lg:py-32 bg-background">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <Badge>Our Experts</Badge>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Meet Our Team of Professionals</h2>
+                <Badge>خبراؤنا</Badge>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">تعرف على فريق المحترفين لدينا</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Our success is driven by a team of dedicated and experienced experts in the geospatial field.
+                  نجاحنا مدفوع بفريق من الخبراء المتفانين وذوي الخبرة في المجال الجغرافي المكاني.
                 </p>
               </div>
             </div>
@@ -126,10 +119,10 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <Badge>Insights</Badge>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">From Our Blog</h2>
+                <Badge>رؤى</Badge>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">من مدونتنا</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Stay updated with the latest news, trends, and case studies in the world of geospatial technology.
+                  ابق على اطلاع بآخر الأخبار والاتجاهات ودراسات الحالة في عالم التكنولوجيا الجغرافية المكانية.
                 </p>
               </div>
             </div>
@@ -148,7 +141,7 @@ export default function Home() {
                     <h3 className="text-lg font-bold">{post.title}</h3>
                     <p className="text-sm text-muted-foreground mt-2">{post.excerpt}</p>
                     <Button variant="link" className="px-0 mt-4 text-accent">
-                      Read More <ArrowRight className="ml-2 h-4 w-4" />
+                      اقرأ المزيد <ArrowLeft className="mr-2 h-4 w-4" />
                     </Button>
                   </CardContent>
                 </Card>

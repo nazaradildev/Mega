@@ -1,88 +1,88 @@
 export const SERVICES = [
   {
-    title: "Real Estate Surveying",
-    description: "Accurate surveys for property transactions, development, and boundary disputes.",
+    title: "مسح العقارات",
+    description: "مسوحات دقيقة لمعاملات العقارات والتطوير ونزاعات الحدود.",
   },
   {
-    title: "Engineering Surveying",
-    description: "Precise measurements and data to support civil engineering design and construction.",
+    title: "المسح الهندسي",
+    description: "قياسات وبيانات دقيقة لدعم تصميم الهندسة المدنية والإنشاءات.",
   },
   {
-    title: "Construction Surveying",
-    description: "Layout and monitoring services to ensure projects are built to specification.",
+    title: "مسح الإنشاءات",
+    description: "خدمات التخطيط والمراقبة لضمان بناء المشاريع وفقًا للمواصفات.",
   },
   {
-    title: "Boundary Surveying",
-    description: "Legally define and monument property lines for landowners and developers.",
+    title: "مسح الحدود",
+    description: "تحديد وتعليم خطوط الملكية بشكل قانوني لملاك الأراضي والمطورين.",
   },
   {
-    title: "Topographic Surveying",
-    description: "Detailed mapping of natural and man-made features of a piece of land.",
+    title: "المسح الطبوغرافي",
+    description: "رسم خرائط مفصلة للمعالم الطبيعية والاصطناعية لقطعة أرض.",
   },
   {
-    title: "ALTA/NSPS Land Title Surveys",
-    description: "Comprehensive surveys that meet the specific needs of title insurance companies.",
+    title: "مسوحات ALTA/NSPS لسندات الملكية",
+    description: "مسوحات شاملة تلبي الاحتياجات المحددة لشركات التأمين على الملكية.",
   },
   {
-    title: "Aerial Surveying & Mapping",
-    description: "High-resolution aerial imagery and data collection for large-scale projects.",
+    title: "المسح الجوي ورسم الخرائط",
+    description: "صور جوية عالية الدقة وجمع بيانات للمشاريع واسعة النطاق.",
   },
   {
-    title: "3D Laser Scanning",
-    description: "Capture complex environments and structures with high-precision 3D point clouds.",
+    title: "المسح بالليزر ثلاثي الأبعاد",
+    description: "التقاط بيئات وهياكل معقدة بسحب نقطية ثلاثية الأبعاد عالية الدقة.",
   },
   {
-    title: "Geographic Information Systems (GIS)",
-    description: "Analysis, management, and visualization of geospatial data to support decision-making.",
+    title: "نظم المعلومات الجغرافية (GIS)",
+    description: "تحليل وإدارة وتصور البيانات الجغرافية المكانية لدعم اتخاذ القرار.",
   },
   {
-    title: "Lidar",
-    description: "Advanced remote sensing technology for creating detailed 3D elevation models.",
+    title: "ليدار",
+    description: "تقنية استشعار عن بعد متقدمة لإنشاء نماذج ارتفاع ثلاثية الأبعاد مفصلة.",
   },
   {
-    title: "Digital Terrain Modeling (DTM)",
-    description: "Creation of digital models of the ground surface for various applications.",
+    title: "نمذجة التضاريس الرقمية (DTM)",
+    description: "إنشاء نماذج رقمية لسطح الأرض لمختلف التطبيقات.",
   },
   {
-    title: "Volumetric Surveys",
-    description: "Calculate volumes of stockpiles, excavations, and other materials with high accuracy.",
+    title: "المسح الحجمي",
+    description: "حساب أحجام المخزونات والحفريات والمواد الأخرى بدقة عالية.",
   },
 ];
 
 export const TEAM_MEMBERS = [
   {
-    name: "Dr. Evelyn Reed",
-    role: "Chief Geospatial Scientist",
+    name: "د. إيفلين ريد",
+    role: "كبير علماء الجغرافيا المكانية",
     avatar: "https://placehold.co/150x150.png",
   },
   {
-    name: "Marcus Thorne",
-    role: "Lead Survey Engineer",
+    name: "ماركوس ثورن",
+    role: "مهندس مسح رئيسي",
     avatar: "https://placehold.co/150x150.png",
   },
   {
-    name: "Jasmine Chen",
-    role: "GIS & Data Analytics Head",
+    name: "ياسمين تشين",
+    role: "رئيسة نظم المعلومات الجغرافية وتحليلات البيانات",
     avatar: "https://placehold.co/150x150.png",
   },
 ];
 
 export const BLOG_POSTS = [
   {
-    title: "The Future of Urban Planning with 3D Laser Scanning",
-    excerpt: "Discover how high-density point clouds are revolutionizing how we design and build cities.",
+    title: "مستقبل التخطيط الحضري باستخدام المسح بالليزر ثلاثي الأبعاد",
+    excerpt: "اكتشف كيف تُحدث السحب النقطية عالية الكثافة ثورة في طريقة تصميمنا وبناء المدن.",
     image: "https://placehold.co/550x310.png",
     imageHint: "city skyline",
   },
   {
-    title: "Lidar vs. Photogrammetry: Choosing the Right Tool",
-    excerpt: "A deep dive into the pros and cons of two leading aerial mapping technologies.",
+    title: "ليدار مقابل التصوير المساحي: اختيار الأداة المناسبة",
+    excerpt: "نظرة عميقة في إيجابيات وسلبيات تقنيتين رائدتين في رسم الخرائط الجوية.",
     image: "https://placehold.co/550x310.png",
     imageHint: "drone aerial",
   },
   {
-    title: "Case Study: ALTA Survey for a Major Commercial Development",
-    excerpt: "How our team delivered a complex ALTA/NSPS survey on time and under budget.",
+    title: "دراسة حالة: مسح ALTA لمشروع تطوير تجاري كبير",
+    excerpt: "كيف قدم فريقنا مسح ALTA/NSPS معقدًا في الوقت المحدد وبأقل من الميزانية.",
     image: "https://placehold.co/550x310.png",
     imageHint: "construction site",
   },
