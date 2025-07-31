@@ -33,10 +33,26 @@ export const HOME_SERVICES = [
 ];
 
 export const MARKETS_SERVED = [
-    { title: "Real Estate & Urban Development", href: "/markets/real-estate-development" },
-    { title: "Infrastructure & Energy", href: "/markets/infrastructure-energy" },
-    { title: "Agriculture & Food Security", href: "/markets/agriculture-food-security" },
-    { title: "Natural Resources & Environment", href: "/markets/natural-resources-environment" },
+    { 
+      title: "Real Estate & Urban Development", 
+      href: "/markets/real-estate-development",
+      description: "Precise data for developers, planners, and consultants, from feasibility studies to marketing."
+    },
+    { 
+      title: "Infrastructure & Energy", 
+      href: "/markets/infrastructure-energy",
+      description: "Ensuring safety and efficiency for roads, bridges, and energy grids with absolute accuracy."
+    },
+    { 
+      title: "Agriculture & Food Security", 
+      href: "/markets/agriculture-food-security",
+      description: "Optimizing production and resource use with remote sensing and GIS technologies."
+    },
+    { 
+      title: "Natural Resources & Environment", 
+      href: "/markets/natural-resources-environment",
+      description: "Advanced solutions for monitoring and managing natural resources and protecting the environment."
+    },
 ];
 
 export const WHY_CHOOSE_US = [
@@ -62,7 +78,7 @@ export const BLOG_POSTS = [
   {
     title: "How Satellite Imagery Reveals Construction Changes on Properties",
     excerpt: "Did you know that any new construction or modification on your property can be monitored from space? Discover how satellite imagery and specialized analysis provide an effective solution for property monitoring, ensuring regulatory compliance, and protecting asset value.",
-    image: "https://placehold.co/550x310.png",
+    image: "/blog1.png",
     imageHint: "satellite property monitoring",
     href: "/blog/monitoring-your-property-from-space",
   },
@@ -70,7 +86,7 @@ export const BLOG_POSTS = [
     title: "Sell and Rent Faster: The Power of Virtual Tours in the UAE Real Estate Market",
     excerpt: "In the competitive UAE real estate market, traditional photos are no longer enough. Discover how virtual tours and professional photography enable you to reach a global audience, accelerate rental and sale decisions, and enhance your brand.",
     image: "https://placehold.co/550x310.png",
-    imageHint: "virtual tour",
+    imageHint: "virtual tour real estate",
     href: "/blog/power-of-virtual-tours-in-uae-real-estate",
   },
   {
@@ -91,7 +107,7 @@ export const BLOG_POSTS = [
     title: "The Future of Urban Analysis with Satellite Imagery and AI",
     excerpt: "We explore how combining space data and artificial intelligence can help build smarter, more sustainable cities.",
     image: "https://placehold.co/550x310.png",
-    imageHint: "city satellite",
+    imageHint: "city satellite AI",
     href: "/blog/the-future-of-urban-analysis-with-satellite-imagery-and-ai",
   },
 ];

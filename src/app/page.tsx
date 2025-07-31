@@ -86,7 +86,7 @@ export default function Home() {
               </div>
               <div className="relative h-64 md:h-full">
                 <Image
-                  src="https://placehold.co/600x400.png"
+                  src="/about1.png"
                   alt="Team working"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -149,10 +149,14 @@ export default function Home() {
                 const Icon = marketIcons[market.title] || Building2;
                 return (
                   <Link key={market.title} href={market.href}>
-                  <div className="flex flex-col items-center text-center p-4 rounded-lg hover:bg-background/50 transition-colors">
-                    <Icon className="w-12 h-12 text-primary mb-4" />
-                    <h3 className="text-lg font-bold">{market.title}</h3>
-                  </div>
+                    <div className="group relative flex h-full flex-col items-center text-center p-6 rounded-lg bg-background/30 transition-all duration-300 hover:bg-background/50 hover:-translate-y-2">
+                       <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg blur-md"></div>
+                       <div className="relative z-10 flex flex-col items-center h-full">
+                         <Icon className="w-12 h-12 text-primary mb-4" />
+                         <h3 className="text-lg font-bold">{market.title}</h3>
+                         <p className="text-sm text-muted-foreground mt-2 flex-grow">{market.description}</p>
+                       </div>
+                    </div>
                   </Link>
                 );
               })}
@@ -165,7 +169,7 @@ export default function Home() {
             <div className="grid gap-10 md:grid-cols-2 lg:gap-16 items-center">
               <div className="relative h-64 md:h-full">
                 <Image
-                  src="https://placehold.co/600x400.png"
+                  src="/about1.png"
                   alt="Surveying equipment"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -206,7 +210,7 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl gap-6 py-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
-              {BLOG_POSTS.map((post) => (
+              {BLOG_POSTS.slice(0, 3).map((post) => (
                 <Card key={post.title} className="overflow-hidden bg-card/50 backdrop-blur-lg border border-secondary hover:border-primary transition-all duration-300 transform hover:-translate-y-2">
                   <Link href={post.href}>
                   <Image
