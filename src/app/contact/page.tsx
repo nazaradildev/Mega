@@ -6,9 +6,9 @@ import { Badge } from "@/components/ui/badge";
 export default function ContactPage() {
   return (
     <div className="bg-background text-foreground">
-      <main className="container px-4 md:px-6">
-        <section className="w-full py-20 md:py-32 lg:py-40 bg-secondary -mx-4 px-4 md:-mx-6 md:px-6">
-          <div className="container px-4 md:px-6 text-center">
+      <main>
+        <section className="w-full py-20 md:py-32 lg:py-40 bg-secondary">
+          <div className="container flex flex-col items-center px-4 md:px-6 text-center">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
               Get in Touch
             </h1>

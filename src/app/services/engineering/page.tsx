@@ -14,7 +14,7 @@ export default function EngineeringPage() {
     <div className="bg-background text-foreground">
       <main>
         <section className="w-full py-20 md:py-32 lg:py-40 bg-secondary">
-          <div className="container px-4 md:px-6 text-center">
+          <div className="container flex flex-col items-center px-4 md:px-6 text-center">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
               Precision Engineering Surveys for Infrastructure & Construction Projects
             </h1>
