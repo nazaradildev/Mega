@@ -15,8 +15,8 @@ const SERVICES = [
 export default function RealEstateDevelopmentPage() {
   return (
     <div className="bg-background text-foreground">
-      <main className="container px-4 md:px-6">
-        <section className="w-full py-20 md:py-32 lg:py-40 bg-secondary -mx-4 px-4 md:-mx-6 md:px-6">
+      <main>
+        <section className="w-full py-20 md:py-32 lg:py-40 bg-secondary">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center text-center">
               <div className="space-y-4 max-w-3xl">
