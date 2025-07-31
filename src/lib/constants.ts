@@ -37,7 +37,7 @@ export const MARKETS_SERVED = [
       title: "Real Estate & Urban Development", 
       href: "/markets/real-estate-development",
       description: "Precise data for developers, planners, and consultants, from feasibility studies to marketing.",
-      image: "https://placehold.co/600x450.png",
+      image: "/market1.png",
       imageHint: "cityscape development"
     },
     { 
