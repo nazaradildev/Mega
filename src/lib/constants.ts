@@ -32,10 +32,10 @@ export const HOME_SERVICES = [
 ];
 
 export const SECTORS_SERVED = [
-    { title: "Real Estate & Urban Development" },
-    { title: "Infrastructure & Energy" },
-    { title: "Agriculture & Food Security" },
-    { title: "Natural Resources & Environment" },
+    { title: "Real Estate & Urban Development", href: "/sectors/real-estate-development" },
+    { title: "Infrastructure & Energy", href: "/sectors/infrastructure-energy" },
+    { title: "Agriculture & Food Security", href: "/sectors/agriculture-food-security" },
+    { title: "Natural Resources & Environment", href: "/sectors/natural-resources-environment" },
 ];
 
 export const WHY_CHOOSE_US = [
@@ -63,17 +63,20 @@ export const BLOG_POSTS = [
     excerpt: "Discover how unmanned aerial vehicles have revolutionized data collection on construction sites, saving time and reducing costs.",
     image: "https://placehold.co/550x310.png",
     imageHint: "drone construction",
+    href: "/blog/how-drones-are-accelerating-construction-projects",
   },
   {
     title: "The Importance of Bathymetric Surveys in Port Development",
     excerpt: "An in-depth look at how accurate depth maps contribute to ensuring safe navigation and designing marine structures efficiently.",
     image: "https://placehold.co/550x310.png",
     imageHint: "port development",
+    href: "/blog/the-importance-of-bathymetric-surveys-in-port-development",
   },
   {
     title: "The Future of Urban Analysis with Satellite Imagery and AI",
     excerpt: "We explore how combining space data and artificial intelligence can help build smarter, more sustainable cities.",
     image: "https://placehold.co/550x310.png",
     imageHint: "city satellite",
+    href: "/blog/the-future-of-urban-analysis-with-satellite-imagery-and-ai",
   },
 ];

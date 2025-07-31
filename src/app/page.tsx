@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Building2, Droplet, Eye, GitBranch, Globe, Image as ImageIcon, Map, Mountain, Satellite, Scale, Ship, Compass, ShieldCheck, Users, BrainCircuit } from "lucide-react";
 import { HOME_SERVICES, SECTORS_SERVED, WHY_CHOOSE_US, BLOG_POSTS } from "@/lib/constants";
 import Link from "next/link";
@@ -57,7 +57,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Link href="#contact">
+                  <Link href="/contact">
                     <Button size="lg">Contact Us</Button>
                   </Link>
                 </div>
@@ -147,10 +147,12 @@ export default function Home() {
               {SECTORS_SERVED.map((sector) => {
                 const Icon = sectorIcons[sector.title] || Building2;
                 return (
-                  <div key={sector.title} className="flex flex-col items-center text-center p-4 rounded-lg hover:bg-background/50 transition-colors">
+                  <Link key={sector.title} href={sector.href}>
+                  <div className="flex flex-col items-center text-center p-4 rounded-lg hover:bg-background/50 transition-colors">
                     <Icon className="w-12 h-12 text-primary mb-4" />
                     <h3 className="text-lg font-bold">{sector.title}</h3>
                   </div>
+                  </Link>
                 );
               })}
             </div>
@@ -205,6 +207,7 @@ export default function Home() {
             <div className="mx-auto grid max-w-5xl gap-6 py-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
               {BLOG_POSTS.map((post) => (
                 <Card key={post.title} className="overflow-hidden bg-card/50 backdrop-blur-lg border border-secondary hover:border-primary transition-all duration-300 transform hover:-translate-y-2">
+                  <Link href={post.href}>
                   <Image
                     alt="Blog post image"
                     className="aspect-video w-full object-cover"
@@ -220,6 +223,7 @@ export default function Home() {
                       Read More <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </CardContent>
+                  </Link>
                 </Card>
               ))}
             </div>
@@ -238,7 +242,7 @@ export default function Home() {
                Contact our team of experts today to discuss your requirements and get a customized quote.
              </p>
              <div className="mt-6">
-               <Link href="#contact">
+               <Link href="/contact">
                   <Button size="lg" variant="secondary">Contact Us</Button>
                 </Link>
              </div>

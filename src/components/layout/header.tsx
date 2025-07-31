@@ -5,14 +5,40 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Logo } from "../icons/logo";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export function Header() {
   const navLinks = [
-    { href: "/#about", label: "About Us" },
-    { href: "/#services", label: "Services" },
-    { href: "/#sectors", label: "Sectors" },
-    { href: "/#blog", label: "Blog" },
-    { href: "/#contact", label: "Contact Us" },
+    { href: "/about", label: "About Us" },
+    { 
+      href: "/services", 
+      label: "Services",
+      subLinks: [
+        { href: "/services/real-estate", label: "Real Estate Surveying" },
+        { href: "/services/engineering", label: "Engineering Surveying" },
+        { href: "/services/satellite-imagery", label: "Satellite Imagery Analysis" },
+        { href: "/services/photogrammetry", label: "Photogrammetry & Drone Surveys" },
+        { href: "/services/hydrographic", label: "Hydrographic Engineering" },
+        { href: "/services/geodetic", label: "Geodetic Surveying" },
+      ] 
+    },
+    { 
+      href: "/sectors", 
+      label: "Sectors",
+      subLinks: [
+        { href: "/sectors/real-estate-development", label: "Real Estate & Urban Development" },
+        { href: "/sectors/infrastructure-energy", label: "Infrastructure & Energy" },
+        { href: "/sectors/agriculture-food-security", label: "Agriculture & Food Security" },
+        { href: "/sectors/natural-resources-environment", label: "Natural Resources & Environment" },
+      ]
+    },
+    { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact Us" },
   ];
 
   return (
@@ -24,6 +50,22 @@ export function Header() {
         </Link>
         <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6 flex-1">
           {navLinks.map((link) => (
+            link.subLinks ? (
+              <DropdownMenu key={link.label}>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="text-muted-foreground hover:text-foreground px-2">
+                    {link.label}
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  {link.subLinks.map((subLink) => (
+                    <DropdownMenuItem key={subLink.label} asChild>
+                      <Link href={subLink.href}>{subLink.label}</Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
             <Link
               key={link.label}
               href={link.href}
@@ -32,6 +74,7 @@ export function Header() {
             >
               {link.label}
             </Link>
+            )
           ))}
         </nav>
         <div className="flex items-center gap-4 ml-auto">
@@ -61,7 +104,7 @@ export function Header() {
               </nav>
             </SheetContent>
           </Sheet>
-           <Link href="/#contact" className="hidden md:flex">
+           <Link href="/contact" className="hidden md:flex">
              <Button>
                 Get a Quote
              </Button>
