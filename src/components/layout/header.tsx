@@ -109,9 +109,9 @@ function MobileNav() {
             {NAV_LINKS.map((link) => (
               link.subLinks ? (
                <AccordionItem value={link.label} key={link.label} className="border-b-0">
-                 <AccordionTrigger className="text-muted-foreground hover:text-foreground hover:no-underline py-3 text-base flex justify-between items-center w-full">
+                 <AccordionTrigger className="text-muted-foreground hover:text-foreground hover:no-underline py-3 text-base flex justify-between items-center w-full group">
                   <span>{link.label}</span>
-                   <ChevronLeft className="h-5 w-5 text-primary transition-transform duration-200 group-[&[data-state=open]]:-rotate-90" />
+                   <ChevronLeft className="h-5 w-5 text-primary transition-transform duration-200 group-data-[state=open]:-rotate-90" />
                  </AccordionTrigger>
                  <AccordionContent className="pl-6 pb-2">
                    <Link
