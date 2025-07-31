@@ -6,58 +6,58 @@ export default function TermsOfServicePage() {
         <article className="prose prose-lg dark:prose-invert mx-auto">
           <div className="space-y-4 not-prose text-center mb-12">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-              شروط الخدمة
+              Terms of Service
             </h1>
-            <p className="text-muted-foreground">آخر تحديث: 24 يوليو 2024</p>
+            <p className="text-muted-foreground">Last updated: July 24, 2024</p>
           </div>
 
           <p>
-            يرجى قراءة شروط الخدمة هذه ("الشروط"، "شروط الخدمة") بعناية قبل استخدام الموقع الإلكتروني الذي تديره MEGA GEOSPATIAL ("نحن"، "شركتنا").
+            Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the website operated by MEGA GEOSPATIAL ("us", "we", or "our").
           </p>
           <p>
-            إن وصولك إلى الخدمة واستخدامها مشروط بقبولك لهذه الشروط والامتثال لها. تنطبق هذه الشروط على جميع الزوار والمستخدمين وغيرهم ممن يصلون إلى الخدمة أو يستخدمونها.
+            Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use the Service.
           </p>
           
-          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">1. استخدام الخدمة</h2>
+          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">1. Use of Service</h2>
           <p>
-            أنت توافق على عدم استخدام الخدمة لأي غرض غير قانوني أو محظور بموجب هذه الشروط. لا يجوز لك استخدام الخدمة بأي طريقة يمكن أن تلحق الضرر بالخدمة أو تعطلها أو تثقل كاهلها أو تضعفها.
+            You agree not to use the Service for any purpose that is illegal or prohibited by these Terms. You may not use the Service in any manner that could damage, disable, overburden, or impair the Service.
           </p>
 
-          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">2. الملكية الفكرية</h2>
+          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">2. Intellectual Property</h2>
           <p>
-            الخدمة ومحتواها الأصلي وميزاتها ووظائفها هي وستظل ملكية حصرية لـ MEGA GEOSPATIAL ومرخصيها. الخدمة محمية بموجب حقوق النشر والعلامات التجارية والقوانين الأخرى في كل من الإمارات العربية المتحدة والدول الأجنبية.
+            The Service and its original content, features, and functionality are and will remain the exclusive property of MEGA GEOSPATIAL and its licensors. The Service is protected by copyright, trademark, and other laws of both the United Arab Emirates and foreign countries.
           </p>
 
-          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">3. روابط لمواقع أخرى</h2>
+          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">3. Links to Other Websites</h2>
           <p>
-            قد تحتوي خدمتنا على روابط لمواقع ويب أو خدمات تابعة لجهات خارجية ليست مملوكة أو خاضعة لسيطرة MEGA GEOSPATIAL.
+            Our Service may contain links to third-party web sites or services that are not owned or controlled by MEGA GEOSPATIAL.
           </p>
           <p>
-            لا تملك MEGA GEOSPATIAL أي سيطرة على، ولا تتحمل أي مسؤولية عن، المحتوى أو سياسات الخصوصية أو الممارسات الخاصة بأي مواقع ويب أو خدمات تابعة لجهات خارجية.
+            MEGA GEOSPATIAL has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party web sites or services.
           </p>
 
-          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">4. إنهاء الخدمة</h2>
+          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">4. Termination</h2>
           <p>
-            يجوز لنا إنهاء أو تعليق وصولك إلى خدمتنا على الفور، دون إشعار مسبق أو مسؤولية، لأي سبب من الأسباب، بما في ذلك على سبيل المثال لا الحصر إذا انتهكت الشروط.
+            We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.
           </p>
           
-          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">5. تحديد المسؤولية</h2>
+          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">5. Limitation of Liability</h2>
           <p>
-            لن تكون MEGA GEOSPATIAL أو مديروها أو موظفوها أو شركاؤها أو وكلاؤها أو موردوها أو الشركات التابعة لها، بأي حال من الأحوال، مسؤولة عن أي أضرار غير مباشرة أو عرضية أو خاصة أو تبعية أو تأديبية، بما في ذلك على سبيل المثال لا الحصر، خسارة الأرباح أو البيانات أو الاستخدام أو الشهرة أو غيرها من الخسائر غير الملموسة.
+            In no event shall MEGA GEOSPATIAL, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.
           </p>
           
-          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">6. التغييرات</h2>
+          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">6. Changes</h2>
           <p>
-            نحتفظ بالحق، وفقًا لتقديرنا الخاص، في تعديل أو استبدال هذه الشروط في أي وقت. سنحاول تقديم إشعار قبل 30 يومًا على الأقل من سريان أي شروط جديدة.
+            We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will try to provide at least 30 days' notice prior to any new terms taking effect.
           </p>
           
-          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">7. اتصل بنا</h2>
+          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">7. Contact Us</h2>
           <p>
-            إذا كان لديك أي أسئلة حول هذه الشروط، يرجى الاتصال بنا:
+            If you have any questions about these Terms, please contact us:
           </p>
           <ul>
-            <li>عبر البريد الإلكتروني: Contact@mgeo.ae</li>
-            <li>عبر زيارة هذه الصفحة على موقعنا: /contact</li>
+            <li>By email: Contact@mgeo.ae</li>
+            <li>By visiting this page on our website: /contact</li>
           </ul>
         </article>
       </main>

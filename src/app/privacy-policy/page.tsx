@@ -6,64 +6,64 @@ export default function PrivacyPolicyPage() {
         <article className="prose prose-lg dark:prose-invert mx-auto">
           <div className="space-y-4 not-prose text-center mb-12">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-              سياسة الخصوصية
+              Privacy Policy
             </h1>
-            <p className="text-muted-foreground">آخر تحديث: 24 يوليو 2024</p>
+            <p className="text-muted-foreground">Last updated: July 24, 2024</p>
           </div>
 
           <p>
-            مرحبًا بك في MEGA GEOSPATIAL ("نحن"، "شركتنا"). نحن ملتزمون بحماية خصوصيتك. توضح سياسة الخصوصية هذه كيفية جمع واستخدام والكشف عن معلوماتك الشخصية عند استخدامك لموقعنا الإلكتروني (الـ "خدمة").
+            Welcome to MEGA GEOSPATIAL ("us", "we", or "our"). We are committed to protecting your privacy. This Privacy Policy explains how your personal information is collected, used, and disclosed by us when you use our website (the "Service").
           </p>
           
-          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">1. المعلومات التي نجمعها</h2>
+          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">1. Information We Collect</h2>
           <p>
-            قد نجمع أنواعًا مختلفة من المعلومات لأغراض متنوعة لتوفير وتحسين خدمتنا لك.
+            We may collect different types of information for various purposes to provide and improve our Service to you.
           </p>
-          <h3 className="text-2xl font-bold tracking-tight mt-8 mb-4">البيانات الشخصية</h3>
+          <h3 className="text-2xl font-bold tracking-tight mt-8 mb-4">Personal Data</h3>
           <p>
-            أثناء استخدام خدمتنا، قد نطلب منك تزويدنا بمعلومات تعريف شخصية معينة يمكن استخدامها للاتصال بك أو تحديد هويتك ("البيانات الشخصية"). قد تشمل هذه المعلومات، على سبيل المثال لا الحصر:
+            While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:
           </p>
           <ul>
-              <li>عنوان البريد الإلكتروني</li>
-              <li>الاسم الأول واسم العائلة</li>
-              <li>رقم الهاتف</li>
-              <li>بيانات الاستخدام</li>
+              <li>Email address</li>
+              <li>First name and last name</li>
+              <li>Phone number</li>
+              <li>Usage Data</li>
           </ul>
 
-          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">2. كيف نستخدم معلوماتك</h2>
+          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">2. How We Use Your Information</h2>
           <p>
-            نستخدم البيانات التي نجمعها لأغراض مختلفة:
+            We use the collected data for various purposes:
           </p>
           <ul>
-              <li>لتوفير وصيانة خدمتنا</li>
-              <li>لإعلامك بالتغييرات التي تطرأ على خدمتنا</li>
-              <li>للسماح لك بالمشاركة في الميزات التفاعلية لخدمتنا عندما تختار القيام بذلك</li>
-              <li>لتقديم خدمة العملاء والدعم</li>
-              <li>لتقديم تحليلات أو معلومات قيمة حتى نتمكن من تحسين الخدمة</li>
-              <li>لمراقبة استخدام الخدمة</li>
-              <li>للكشف عن المشكلات الفنية ومنعها ومعالجتها</li>
+              <li>To provide and maintain our Service</li>
+              <li>To notify you about changes to our Service</li>
+              <li>To allow you to participate in interactive features of our Service when you choose to do so</li>
+              <li>To provide customer care and support</li>
+              <li>To provide analysis or valuable information so that we can improve the Service</li>
+              <li>To monitor the usage of the Service</li>
+              <li>To detect, prevent and address technical issues</li>
           </ul>
 
-          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">3. أمن البيانات</h2>
+          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">3. Data Security</h2>
           <p>
-            إن أمن بياناتك مهم بالنسبة لنا، ولكن تذكر أنه لا توجد وسيلة نقل عبر الإنترنت أو طريقة تخزين إلكتروني آمنة بنسبة 100%. بينما نسعى جاهدين لاستخدام وسائل مقبولة تجاريًا لحماية بياناتك الشخصية، لا يمكننا ضمان أمنها المطلق.
+            The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.
           </p>
 
-          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">4. التغييرات على سياسة الخصوصية هذه</h2>
+          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">4. Changes to This Privacy Policy</h2>
           <p>
-            قد نقوم بتحديث سياسة الخصوصية الخاصة بنا من وقت لآخر. سنقوم بإعلامك بأي تغييرات عن طريق نشر سياسة الخصوصية الجديدة على هذه الصفحة.
+            We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
           </p>
           <p>
-            ننصحك بمراجعة سياسة الخصوصية هذه بشكل دوري للاطلاع على أي تغييرات. تعتبر التغييرات التي تطرأ على سياسة الخصوصية هذه سارية المفعول عند نشرها على هذه الصفحة.
+            You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
           </p>
 
-          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">5. اتصل بنا</h2>
+          <h2 className="text-3xl font-bold tracking-tight mt-12 mb-4">5. Contact Us</h2>
           <p>
-            إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا:
+            If you have any questions about this Privacy Policy, please contact us:
           </p>
           <ul>
-            <li>عبر البريد الإلكتروني: Contact@mgeo.ae</li>
-            <li>عبر زيارة هذه الصفحة على موقعنا: /contact</li>
+            <li>By email: Contact@mgeo.ae</li>
+            <li>By visiting this page on our website: /contact</li>
           </ul>
         </article>
       </main>
