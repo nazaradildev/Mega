@@ -14,7 +14,7 @@ export default function BlogPostPage() {
              </h1>
              <div className="relative aspect-video">
                 <Image 
-                    src="https://placehold.co/1200x675.png" 
+                    src="/blog4.png" 
                     alt="Bathymetric survey of a port"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

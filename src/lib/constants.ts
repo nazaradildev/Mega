@@ -99,8 +99,8 @@ export const BLOG_POSTS = [
   {
     title: "The Importance of Bathymetric Surveys in Port Development",
     excerpt: "An in-depth look at how accurate depth maps contribute to ensuring safe navigation and designing marine structures efficiently.",
-    image: "https://placehold.co/550x310.png",
-    imageHint: "port development",
+    image: "/blog4.png",
+    imageHint: "bathymetric survey",
     href: "/blog/the-importance-of-bathymetric-surveys-in-port-development",
   },
   {
