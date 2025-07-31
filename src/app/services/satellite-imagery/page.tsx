@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import Link from "next/link";
@@ -37,7 +38,7 @@ export default function SatelliteImageryPage() {
                   ))}
                 </ul>
               </div>
-              <div className="space-y-6 text-center md:text-left p-8 bg-secondary rounded-lg">
+              <div className="space-y-6 text-center lg:text-left p-8 bg-secondary rounded-lg">
                  <h2 className="text-3xl font-bold tracking-tighter">Discover what space data holds for you.</h2>
                  <Button asChild size="lg" className="mt-4">
                     <Link href="/contact">Request a Consultation with Our Specialists</Link>
