@@ -58,6 +58,9 @@ export function Header() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
+                  <DropdownMenuItem asChild>
+                     <Link href={link.href}>All {link.label}</Link>
+                  </DropdownMenuItem>
                   {link.subLinks.map((subLink) => (
                     <DropdownMenuItem key={subLink.label} asChild>
                       <Link href={subLink.href}>{subLink.label}</Link>
