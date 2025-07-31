@@ -5,7 +5,7 @@ import { Logo } from "../icons/logo";
 export function Footer() {
   return (
     <footer className="w-full bg-secondary text-secondary-foreground py-12 md:py-16">
-      <div className="container grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-8 px-4 md:px-6">
+      <div className="container px-4 md:px-6 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-8">
         <div className="space-y-4 col-span-1 md:col-span-4 lg:col-span-1">
           <Link href="/" className="flex items-center space-x-2" prefetch={false}>
             <Logo className="h-8 w-8 text-primary" />

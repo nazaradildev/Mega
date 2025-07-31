@@ -6,8 +6,8 @@ import { Badge } from "@/components/ui/badge";
 export default function AboutPage() {
   return (
     <div className="bg-background text-foreground">
-      <main>
-        <section className="w-full py-20 md:py-32 lg:py-40 bg-secondary">
+      <main className="container px-4 md:px-6">
+        <section className="w-full py-20 md:py-32 lg:py-40 bg-secondary -mx-4 px-4 md:-mx-6 md:px-6">
           <div className="container px-4 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
               <div className="space-y-4">
@@ -25,9 +25,9 @@ export default function AboutPage() {
                 <Image
                   src="https://placehold.co/600x400.png"
                   alt="Team of engineers"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-xl"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="rounded-xl object-cover"
                   data-ai-hint="team collaboration"
                 />
               </div>
@@ -54,7 +54,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary -mx-4 px-4 md:-mx-6 md:px-6">
           <div className="container px-4 md:px-6">
             <div className="text-center space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Building a Sustainable Future... with Precision</h2>
@@ -105,7 +105,7 @@ export default function AboutPage() {
                     </div>
                 </div>
                 <div className="relative h-80">
-                  <Image src="https://placehold.co/600x450.png" alt="Careers at MEGA GEOSPATIAL" layout="fill" objectFit="cover" className="rounded-xl" data-ai-hint="office team working"/>
+                  <Image src="https://placehold.co/600x450.png" alt="Careers at MEGA GEOSPATIAL" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="rounded-xl object-cover" data-ai-hint="office team working"/>
                 </div>
              </div>
            </div>

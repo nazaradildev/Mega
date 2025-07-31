@@ -40,9 +40,10 @@ export default function Home() {
           <Image
             src="https://placehold.co/1920x1080.png"
             alt="Abstract background"
-            layout="fill"
-            objectFit="cover"
-            className="z-0"
+            fill
+            sizes="100vw"
+            priority
+            className="object-cover z-0"
             data-ai-hint="abstract geometric background"
           />
           <div className="container px-4 md:px-6 z-20 relative">
@@ -87,9 +88,9 @@ export default function Home() {
                 <Image
                   src="https://placehold.co/600x400.png"
                   alt="Team working"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-lg"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="rounded-lg object-cover"
                   data-ai-hint="engineers collaborating"
                 />
               </div>
@@ -166,9 +167,9 @@ export default function Home() {
                 <Image
                   src="https://placehold.co/600x400.png"
                   alt="Surveying equipment"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-lg"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="rounded-lg object-cover"
                   data-ai-hint="geospatial technology"
                 />
               </div>

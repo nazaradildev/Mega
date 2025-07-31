@@ -8,8 +8,8 @@ import { BLOG_POSTS } from '@/lib/constants';
 export default function BlogPage() {
   return (
     <div className="bg-background text-foreground">
-      <main>
-        <section className="w-full py-20 md:py-32 lg:py-40 bg-primary/10">
+      <main className="container px-4 md:px-6">
+        <section className="w-full py-20 md:py-32 lg:py-40 bg-primary/10 -mx-4 px-4 md:-mx-6 md:px-6">
           <div className="container px-4 md:px-6 text-center">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
               MEGA GEOSPATIAL Blog

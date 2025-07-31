@@ -15,8 +15,8 @@ const SERVICES = [
 export default function RealEstateDevelopmentPage() {
   return (
     <div className="bg-background text-foreground">
-      <main>
-        <section className="w-full py-20 md:py-32 lg:py-40 bg-secondary">
+      <main className="container px-4 md:px-6">
+        <section className="w-full py-20 md:py-32 lg:py-40 bg-secondary -mx-4 px-4 md:-mx-6 md:px-6">
           <div className="container px-4 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
               <div className="space-y-4">
@@ -31,9 +31,9 @@ export default function RealEstateDevelopmentPage() {
                 <Image
                   src="https://placehold.co/600x400.png"
                   alt="Urban Development"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-xl"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="rounded-xl object-cover"
                   data-ai-hint="cityscape development"
                 />
               </div>
