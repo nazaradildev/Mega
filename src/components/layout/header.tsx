@@ -105,15 +105,7 @@ function MobileNav() {
            <span>MEGA GEOSPATIAL</span>
          </div>
          <nav className="grid gap-2 text-lg font-medium px-4">
-          <Link
-            href="/"
-            className="block text-muted-foreground hover:text-foreground py-3 text-base"
-            prefetch={false}
-            onClick={() => setOpen(false)}
-          >
-            Home
-          </Link>
-           <Accordion type="multiple" className="w-full">
+          <Accordion type="multiple" className="w-full">
              {NAV_LINKS.filter(link => !!link.subLinks).map((link) => (
                <AccordionItem value={link.label} key={link.label} className="border-b-0">
                  <AccordionTrigger className="text-muted-foreground hover:text-foreground hover:no-underline py-3 text-base flex justify-between items-center w-full">
@@ -143,18 +135,18 @@ function MobileNav() {
                  </AccordionContent>
                </AccordionItem>
              ))}
-             {NAV_LINKS.filter(link => !link.subLinks && link.href !== "/").map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="block text-muted-foreground hover:text-foreground py-3 text-base"
-                  prefetch={false}
-                  onClick={() => setOpen(false)}
-                >
-                  {link.label}
-                </Link>
-             ))}
            </Accordion>
+            {NAV_LINKS.filter(link => !link.subLinks).map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="block text-muted-foreground hover:text-foreground py-3 text-base"
+                prefetch={false}
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
          </nav>
        </SheetContent>
     </Sheet>
@@ -170,7 +162,7 @@ export function Header() {
   
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className={cn("container flex h-14 max-w-screen-2xl items-center", isClient && "px-4 md:px-6")}>
+      <div className={cn("container flex h-14 max-w-screen-2xl items-center px-4 md:px-6")}>
         <Link href="/" className="mr-6 flex items-center space-x-2" prefetch={false}>
           <Logo className="h-6 w-6 text-primary" />
           <span className="font-bold hidden sm:inline-block">MEGA GEOSPATIAL</span>
