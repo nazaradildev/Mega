@@ -44,7 +44,7 @@ export const MARKETS_SERVED = [
       title: "Infrastructure & Energy", 
       href: "/markets/infrastructure-energy",
       description: "Ensuring safety and efficiency for roads, bridges, and energy grids with absolute accuracy.",
-      image: "https://placehold.co/600x450.png",
+      image: "/market2.png",
       imageHint: "bridge infrastructure"
     },
     { 
