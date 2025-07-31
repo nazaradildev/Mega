@@ -92,7 +92,7 @@ export const BLOG_POSTS = [
   {
     title: "How Drones Are Accelerating Construction Projects",
     excerpt: "Discover how unmanned aerial vehicles have revolutionized data collection on construction sites, saving time and reducing costs.",
-    image: "https://placehold.co/550x310.png",
+    image: "/blog3.png",
     imageHint: "drone construction",
     href: "/blog/how-drones-are-accelerating-construction-projects",
   },
@@ -111,4 +111,3 @@ export const BLOG_POSTS = [
     href: "/blog/the-future-of-urban-analysis-with-satellite-imagery-and-ai",
   },
 ];
-
