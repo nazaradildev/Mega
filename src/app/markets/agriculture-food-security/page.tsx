@@ -21,12 +21,12 @@ export default function AgricultureFoodSecurityPage() {
                   Precision Agriculture for a Secure Food Future
                 </h1>
                 <p className="text-muted-foreground md:text-xl/relaxed">
-                  We use remote sensing and GIS technologies to help farmers and agricultural companies optimize production, rationalize water and fertilizer use, and monitor crop health on a large scale.
+                  Optimizing production and resource use with remote sensing and GIS technologies.
                 </p>
               </div>
               <div className="relative h-96">
                 <Image
-                  src="https://placehold.co/600x400.png"
+                  src="/market3.png"
                   alt="Precision Agriculture"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
