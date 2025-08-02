@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Building2, GitBranch, Droplet, Users } from 'lucide-react'; // Assuming 'Users' for Agri and 'Droplet' for Resources
-import { SECTORS_SERVED } from '@/lib/constants';
+import { Building2, GitBranch, Droplet, Leaf } from 'lucide-react';
+import { MARKETS_SERVED } from '@/lib/constants';
 
 const sectorIcons: { [key: string]: React.ElementType } = {
   "Real Estate & Urban Development": Building2,
   "Infrastructure & Energy": GitBranch,
-  "Agriculture & Food Security": Users,
+  "Agriculture & Food Security": Leaf,
   "Natural Resources & Environment": Droplet,
 };
 
@@ -29,7 +29,7 @@ export default function SectorsPage() {
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              {SECTORS_SERVED.map((sector) => {
+              {MARKETS_SERVED.map((sector) => {
                 const Icon = sectorIcons[sector.title] || Building2;
                 return (
                   <Link href={sector.href} key={sector.title}>
