@@ -122,53 +122,57 @@ function MobileNav() {
       </SheetTrigger>
       <SheetContent side="left" className="pr-0">
         <SheetTitle className="sr-only">Main Menu</SheetTitle>
-        <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4 p-4" onClick={() => setOpen(false)}>
-            <Image src="/megalogo11.jpg" alt="MEGA GEOSPATIAL Logo" width={40} height={40} className="rounded-md" />
-          <span className="sr-only">MEGA GEOSPATIAL</span>
-        </Link>
+        <SheetClose asChild>
+          <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4 p-4" onClick={() => setOpen(false)}>
+              <Image src="/megalogo11.jpg" alt="MEGA GEOSPATIAL Logo" width={40} height={40} className="rounded-md" />
+            <span className="sr-only">MEGA GEOSPATIAL</span>
+          </Link>
+        </SheetClose>
         <div className="px-4">
            <Accordion type="multiple" className="w-full">
-            {NAV_LINKS.map((link) =>
-              link.subLinks ? (
-                <AccordionItem value={link.label} key={link.label} className="border-b-0">
-                  <AccordionTrigger className="text-muted-foreground hover:text-foreground hover:no-underline py-3 text-base flex justify-between items-center w-full group">
-                    <span>{link.label}</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="pl-6 pb-2">
-                    <SheetClose asChild>
-                      <NavLink
-                        href={link.href}
-                        className="block py-2 text-base"
-                        onClick={() => setOpen(false)}
-                      >
-                        All {link.label}
-                      </NavLink>
-                    </SheetClose>
-                    {link.subLinks?.map((subLink) => (
-                      <SheetClose asChild key={subLink.href}>
+            {NAV_LINKS.map((link) => (
+              <AccordionItem value={link.label} key={link.label} className="border-b-0">
+                {link.subLinks ? (
+                  <>
+                    <AccordionTrigger className="text-muted-foreground hover:text-foreground hover:no-underline py-3 text-base flex justify-between items-center w-full group">
+                      <span>{link.label}</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="pl-6 pb-2">
+                      <SheetClose asChild>
                         <NavLink
-                          href={subLink.href}
+                          href={link.href}
                           className="block py-2 text-base"
-                          onClick={() => set-open(false)}
+                          onClick={() => setOpen(false)}
                         >
-                          {subLink.label}
+                          All {link.label}
                         </NavLink>
                       </SheetClose>
-                    ))}
-                  </AccordionContent>
-                </AccordionItem>
-              ) : (
-                <SheetClose asChild key={link.label}>
-                   <NavLink
-                    href={link.href}
-                    className="block py-3 text-base border-b-0"
-                    onClick={() => setOpen(false)}
-                  >
-                    {link.label}
-                  </NavLink>
-                </SheetClose>
-              )
-            )}
+                      {link.subLinks?.map((subLink) => (
+                        <SheetClose asChild key={subLink.href}>
+                          <NavLink
+                            href={subLink.href}
+                            className="block py-2 text-base"
+                            onClick={() => setOpen(false)}
+                          >
+                            {subLink.label}
+                          </NavLink>
+                        </SheetClose>
+                      ))}
+                    </AccordionContent>
+                  </>
+                ) : (
+                  <SheetClose asChild>
+                     <NavLink
+                      href={link.href}
+                      className="block py-3 text-base border-b-0 w-full text-left"
+                      onClick={() => setOpen(false)}
+                    >
+                      {link.label}
+                    </NavLink>
+                  </SheetClose>
+                )}
+              </AccordionItem>
+            ))}
           </Accordion>
         </div>
       </SheetContent>
@@ -194,7 +198,7 @@ export function Header() {
         <DesktopNav />
         
         <div className="flex items-center gap-4 ml-auto">
-          {isClient && <MobileNav />}
+          {isClient ? <MobileNav /> : <div className="md:hidden h-9 w-9" />}
           <Link href="/contact" className="hidden md:flex">
             <Button>
               Get a Quote
