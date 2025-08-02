@@ -2,13 +2,13 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Building2, Droplet, GitBranch, Globe, Image as ImageIcon, Map, Mountain, Satellite, Scale, Ship, Compass, ShieldCheck, Users, BrainCircuit, Leaf, Eye } from "lucide-react";
+import { ArrowRight, Building2, Droplet, GitBranch, Globe, Eye, Map, Leaf, Satellite, Ruler, Ship, ShieldCheck, Users, BrainCircuit } from "lucide-react";
 import { HOME_SERVICES, MARKETS_SERVED, WHY_CHOOSE_US, BLOG_POSTS } from "@/lib/constants";
 import Link from "next/link";
 
 const serviceIcons: { [key: string]: React.ElementType } = {
   "Real Estate Surveying Services": Map,
-  "Engineering Surveying Services": Compass,
+  "Engineering Surveying Services": Ruler,
   "Satellite Imagery Analysis": Satellite,
   "Photogrammetry & Drone Surveys": Eye,
   "Hydrographic Engineering": Ship,
