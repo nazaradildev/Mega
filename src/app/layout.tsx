@@ -3,6 +3,13 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
+import { Inter } from 'next/font/google';
+import { cn } from '@/lib/utils';
+
+const fontSans = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
 
 export const metadata: Metadata = {
   title: 'MEGA GEOSPATIAL',
@@ -18,11 +25,11 @@ export default function RootLayout({
     <html lang="en" dir="ltr" className="dark">
       <head>
         <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased bg-background text-foreground min-h-screen flex flex-col">
+      <body className={cn(
+          "min-h-screen bg-background font-sans antialiased flex flex-col",
+          fontSans.variable
+        )}>
         <Header />
         <div className="flex-grow">{children}</div>
         <Footer />
