@@ -82,7 +82,7 @@ function DesktopNav() {
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className={cn(
                 "text-muted-foreground hover:text-foreground px-2 flex items-center gap-1 group",
-                (pathname.startsWith(link.href)) && "text-foreground font-semibold"
+                (pathname.startsWith(link.href + '/') || pathname === link.href) && "text-foreground font-semibold"
               )}>
                 {link.label}
                 <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
