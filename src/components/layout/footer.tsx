@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
         <div className="space-y-4 col-span-1 md:col-span-2 lg:col-span-1">
           <Link href="/" className="flex items-center space-x-2" prefetch={false}>
-            <Image src="/megalogo11.jpg" alt="MEGA GEOSPATIAL Logo" width={32} height={32} className="rounded-md" />
+            <Image src="/megalogo11.jpg" alt="MEGA GEOSPATIAL Logo" width={40} height={40} className="rounded-md" />
             <span className="text-xl font-bold">MEGA GEOSPATIAL</span>
           </Link>
           <p className="text-muted-foreground">
