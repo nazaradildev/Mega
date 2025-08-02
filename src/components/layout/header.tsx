@@ -3,8 +3,8 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
-import { Menu, ChevronLeft, ChevronDown } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetClose } from "@/components/ui/sheet";
+import { Menu, ChevronDown } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -135,34 +135,38 @@ function MobileNav() {
                     <span>{link.label}</span>
                   </AccordionTrigger>
                   <AccordionContent className="pl-6 pb-2">
-                    <NavLink
-                      href={link.href}
-                      className="block py-2 text-base"
-                      onClick={() => setOpen(false)}
-                    >
-                      All {link.label}
-                    </NavLink>
-                    {link.subLinks?.map((subLink) => (
+                    <SheetClose asChild>
                       <NavLink
-                        key={subLink.href}
-                        href={subLink.href}
+                        href={link.href}
                         className="block py-2 text-base"
                         onClick={() => setOpen(false)}
                       >
-                        {subLink.label}
+                        All {link.label}
                       </NavLink>
+                    </SheetClose>
+                    {link.subLinks?.map((subLink) => (
+                      <SheetClose asChild key={subLink.href}>
+                        <NavLink
+                          href={subLink.href}
+                          className="block py-2 text-base"
+                          onClick={() => set-open(false)}
+                        >
+                          {subLink.label}
+                        </NavLink>
+                      </SheetClose>
                     ))}
                   </AccordionContent>
                 </AccordionItem>
               ) : (
-                 <NavLink
-                  key={link.label}
-                  href={link.href}
-                  className="block py-3 text-base border-b-0"
-                  onClick={() => setOpen(false)}
-                >
-                  {link.label}
-                </NavLink>
+                <SheetClose asChild key={link.label}>
+                   <NavLink
+                    href={link.href}
+                    className="block py-3 text-base border-b-0"
+                    onClick={() => setOpen(false)}
+                  >
+                    {link.label}
+                  </NavLink>
+                </SheetClose>
               )
             )}
           </Accordion>
@@ -183,8 +187,8 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center px-4 md:px-6">
         <Link href="/" className="mr-6 flex items-center space-x-2" prefetch={false}>
-          <Image src="/megalogo11.jpg" alt="MEGA GEOSPATIAL Logo" width={40} height={40} className="rounded-md object-contain" />
-          <span className="font-bold hidden sm:inline-block sr-only">MEGA GEOSPATIAL</span>
+          <Image src="/megalogo11.jpg" alt="MEGA GEOSPATIAL Logo" width={40} height={40} className="rounded-md" />
+          <span className="font-bold hidden sm:inline-block">MEGA GEOSPATIAL</span>
         </Link>
 
         <DesktopNav />
