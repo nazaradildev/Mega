@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Map, Compass, Satellite, Eye, Ship, Globe } from 'lucide-react';
+import { ArrowRight, Map, Ruler, Satellite, Eye, Ship, Globe } from 'lucide-react';
 import { HOME_SERVICES } from '@/lib/constants';
 
 const serviceIcons: { [key: string]: React.ElementType } = {
   "Real Estate Surveying Services": Map,
-  "Engineering Surveying Services": Compass,
+  "Engineering Surveying Services": Ruler,
   "Satellite Imagery Analysis": Satellite,
   "Photogrammetry & Drone Surveys": Eye,
   "Hydrographic Engineering": Ship,
