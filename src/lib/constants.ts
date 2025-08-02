@@ -86,7 +86,7 @@ export const BLOG_POSTS = [
   {
     title: "Monitoring Your Property from Space: How Expert Analysis Reveals Construction Changes",
     excerpt: "Did you know that any new construction or modification on your property can be monitored from space? Discover how satellite imagery and specialized analysis provide an effective solution for property monitoring, ensuring regulatory compliance, and protecting asset value.",
-    image: "https://placehold.co/1200x675.png",
+    image: "/blog1.png",
     imageHint: "satellite property monitoring",
     href: "/blog/monitoring-your-property-from-space",
   },
