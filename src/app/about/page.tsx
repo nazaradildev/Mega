@@ -9,7 +9,7 @@ export default function AboutPage() {
       <main className="container px-4 md:px-6">
         <section className="w-full py-20 md:py-32 lg:py-40 bg-secondary rounded-lg">
           <div className="container px-4 md:px-6">
-            <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+            <div className="grid gap-10 lg:grid-cols-1 lg:gap-16">
               <div className="space-y-4">
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
                   Our Story: From an Ambitious Vision to a Leading Reality
@@ -20,16 +20,6 @@ export default function AboutPage() {
                 <p className="text-muted-foreground md:text-xl/relaxed">
                   From the outset, we set a clear goal: not just to be a service provider, but a strategic partner to our clients. We invested in the latest global technologies—from ultra-precise GPS systems to advanced LiDAR and drones—and honed our team's expertise to tackle the toughest field challenges.
                 </p>
-              </div>
-              <div className="relative h-96">
-                <Image
-                  src="https://placehold.co/600x400.png"
-                  alt="Team of engineers"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="rounded-xl object-cover"
-                  data-ai-hint="team collaboration"
-                />
               </div>
             </div>
           </div>
@@ -81,7 +71,7 @@ export default function AboutPage() {
 
         <section className="w-full py-12 md:py-24 lg:py-32">
            <div className="container px-4 md:px-6">
-             <div className="grid gap-10 md:grid-cols-2 items-center">
+             <div className="grid gap-10 md:grid-cols-1 items-center">
                 <div>
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Be Part of a Team That Shapes the Future</h2>
                     <p className="mt-4 text-muted-foreground md:text-xl/relaxed">
@@ -103,9 +93,6 @@ export default function AboutPage() {
                             <a href="mailto:careers@mgeo.ae">Send your CV to: careers@mgeo.ae</a>
                         </Button>
                     </div>
-                </div>
-                <div className="relative h-80">
-                  <Image src="https://placehold.co/600x450.png" alt="Careers at MEGA GEOSPATIAL" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="rounded-xl object-cover" data-ai-hint="office team working"/>
                 </div>
              </div>
            </div>

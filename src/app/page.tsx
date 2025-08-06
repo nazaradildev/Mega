@@ -167,17 +167,7 @@ export default function Home() {
 
         <section id="why-us" className="w-full py-12 md:py-24 lg:py-32 bg-background">
           <div className="container px-4 md:px-6">
-            <div className="grid gap-10 md:grid-cols-2 lg:gap-16 items-center">
-              <div className="relative h-64 md:h-full">
-                <Image
-                  src="/about1.png"
-                  alt="Surveying equipment"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="rounded-lg object-cover"
-                  data-ai-hint="geospatial technology"
-                />
-              </div>
+            <div className="grid gap-10 md:grid-cols-1 lg:gap-16 items-center">
                <div>
                 <Badge>Why Choose Us?</Badge>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mt-2">
