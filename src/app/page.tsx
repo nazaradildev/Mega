@@ -70,8 +70,8 @@ export default function Home() {
 
         <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
           <div className="container px-4 md:px-6">
-            <div className="grid gap-10 md:grid-cols-2 lg:gap-16 items-center">
-              <div>
+            <div className="flex items-center">
+              <div className="space-y-4">
                 <Badge>About Us</Badge>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mt-2">
                   MEGA GEOSPATIAL: Where Expertise Meets Innovation
@@ -84,16 +84,6 @@ export default function Home() {
                     Learn More About Our Story <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
-              </div>
-              <div className="relative h-64 md:h-full">
-                <Image
-                  src="/about1.png"
-                  alt="Team working"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="rounded-lg object-cover"
-                  data-ai-hint="engineers collaborating"
-                />
               </div>
             </div>
           </div>
